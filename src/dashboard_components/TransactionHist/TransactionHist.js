@@ -45,15 +45,16 @@ export default function TransactionHist(props) {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>{name}</td>
-                        <td>{date}</td>
-                        <td>{amount}</td>
-                        <td>{amount}</td>
-                        <td>{type}</td>
-                        <td>{category}</td>
-                        <td>{comments}</td>
-                    </tr>
+                    {transactions.map(Row => (
+                        <tr>
+                            <td>{Row.name}</td>
+                            <td>{Row.date}</td>
+                            <td>{Row.amount}</td>
+                            <td>{Row.type}</td>
+                            <td>{Row.category}</td>
+                            <td>{Row.comments}</td>
+                        </tr>
+                    ))}
                 </tbody>
             </Table>
         </div>
