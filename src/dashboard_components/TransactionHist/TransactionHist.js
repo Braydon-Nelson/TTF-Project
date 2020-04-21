@@ -14,22 +14,7 @@ export default function TransactionHist(props) {
         comments
     } = props;
 
-
-
-    // {
-    //     transactions.map(transaction => (
-    //         <Col lg={6} xs={12}>
-    //             <ProjectCard
-    //                 key={project.key}
-    //                 name={project.name}
-    //                 image={project.image}
-    //                 repositoryLink={project.repositoryLink}
-    //                 deployedLink={project.deployedLink}
-    //             />
-    //         </Col>
-    //     ))
-    // }
-
+//figure out how to add a date sort function!
 
     return (
         <div>

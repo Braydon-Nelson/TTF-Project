@@ -5,11 +5,11 @@ import { Polar } from 'react-chartjs-2';
 const data = {
     datasets: [{
         data: [
-            11,
-            16,
-            7,
-            3,
-            14
+            70,
+            150,
+            35,
+            68,
+            75
         ],
         backgroundColor: [
             '#FF6384',
@@ -18,15 +18,15 @@ const data = {
             '#E7E9ED',
             '#36A2EB'
         ],
-        label: 'My dataset' // for legend
+        label: 'Monthly Spending Summary' // for legend
     }],
 
     labels: [
-        'Red',
-        'Green',
-        'Yellow',
-        'Grey',
-        'Blue'
+        'Utilities',
+        'Rent/Mortgage',
+        'Food/Groceries',
+        'Shopping/Retail',
+        'Education'
     ]
 };
 
@@ -34,14 +34,10 @@ export default class PolarDemo extends Component {
     render() {
         return (
             <div>
-                <h2>Polar Example</h2>
+                <h2>Monthly Spending Summary</h2>
                 <Polar data={data} />
             </div>
         );
     }
 
-    // componentDidMount() {
-    //     const { datasets } = this.refs.chart.chartInstance.data
-    //     console.log(datasets[0].data);
-    // }
 }

@@ -14,7 +14,7 @@ export default function UserDashboard() {
     return (
         <div>
 
-            <Container>
+            <Container className = "dashboardContainer">
 
                 <Tabs defaultActiveKey="table" id="uncontrolled-tab-example">
                     <Tab eventKey="table" title="Transaction Details">

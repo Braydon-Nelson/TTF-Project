@@ -3,9 +3,10 @@ import { Line } from 'react-chartjs-2';
 
 const data = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+
   datasets: [
     {
-      label: 'My First dataset',
+      label: 'Balance Total',
       fill: false,
       lineTension: 0.1,
       backgroundColor: 'rgba(75,192,192,0.4)',
@@ -23,7 +24,7 @@ const data = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [65, 59, 80, 81, 56, 55, 40]
+      data: [500, 2000, 3100, 900, 2100, 7000, 4000]
     }
   ]
 };
@@ -32,7 +33,7 @@ export default class LineDemo extends Component {
   render() {
     return (
       <div>
-        <h2>Line Example</h2>
+        <h2>Your Balance in the Last 30 Days</h2>
         <Line ref="chart" data={data} />
       </div>
     );
