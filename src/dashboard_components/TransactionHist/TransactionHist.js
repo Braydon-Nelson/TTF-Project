@@ -5,16 +5,16 @@ import { transactions } from "../../data/transactions";
 
 export default function TransactionHist(props) {
 
-    const {
-        name,
-        date,
-        amount,
-        type,
-        category,
-        comments
-    } = props;
+    // const {
+    //     name,
+    //     date,
+    //     amount,
+    //     type,
+    //     category,
+    //     comments
+    // } = props;
 
-//figure out how to add a date sort function!
+    //figure out how to add a date sort function!
 
     return (
         <div>

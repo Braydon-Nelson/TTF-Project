@@ -1,22 +1,45 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
 import UserDashboard from "./routes/UserDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import Navigation from './components/Navigation';
+import LandingPage from './pages/Landing';
+import SignUpPage from './pages/SignUp';
+import SignInPage from './pages/SignIn';
+import PasswordForgetPage from './pages/PasswordForget';
+import HomePage from './pages/Home';
+import AccountPage from './pages/Account';
+import AdminPage from './pages/Admin';
+import { withAuthentication } from './components/Session';
 
-function App() {
-  return (
-    <div className="App">
-      <Router basename={process.env.PUBLIC_URL}>
+import * as ROUTES from "./constants/routes";
 
-        <Switch>
-          <Route path="/dashboard" component={UserDashboard} />
-        </Switch>
 
-      </Router>
-    </div>
-  );
-}
+const App = () => (
+    <Router>
+    {/*  <Router basename={process.env.PUBLIC_URL}> */}
 
-export default App;
+
+        <div>
+            <Navigation />
+            <hr />
+            <Route exact path={ROUTES.LANDING} component={LandingPage} />
+            <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+            <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+            <Route
+                path={ROUTES.PASSWORD_FORGET}
+                component={PasswordForgetPage}
+            />
+            <Route path={ROUTES.HOME} component={HomePage} />
+            <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+            <Route path={ROUTES.ADMIN} component={AdminPage} />
+
+            <Route path="/dashboard" component={UserDashboard} />
+
+        </div>
+    </Router>
+);
+
+export default withAuthentication(App);

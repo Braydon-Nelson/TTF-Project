@@ -1,5 +1,5 @@
 {
-  "name": "ttf-project",
+  "name": "react-firebase-authentication",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,13 +9,15 @@
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
     "create-react-class": "^15.6.3",
+    "firebase": "^7.14.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
     "react-chartjs": "^1.2.0",
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "recompose": "^0.30.0"
   },
   "scripts": {
     "start": "react-scripts start",
