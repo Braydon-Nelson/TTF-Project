@@ -1,5 +1,8 @@
 import React from 'react';
+
+//NOTICE Tyler temporarily commented this out to get it to compile
 // import './App.css';
+import AddTransaction from "./routes/AddTransaction";
 import UserDashboard from "./routes/UserDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -19,7 +22,7 @@ import * as ROUTES from "./constants/routes";
 
 const App = () => (
     <Router>
-    {/*  <Router basename={process.env.PUBLIC_URL}> */}
+  
 
 
         <div>
@@ -36,7 +39,13 @@ const App = () => (
             <Route path={ROUTES.ACCOUNT} component={AccountPage} />
             <Route path={ROUTES.ADMIN} component={AdminPage} />
 
+
+
             <Route path="/dashboard" component={UserDashboard} />
+
+            <Route path="/addTransaction" component={AddTransaction} />
+
+
 
         </div>
     </Router>
