@@ -1,0 +1,16 @@
+.navback {
+    background-color:rgba(127, 223, 255,0.6);
+    height: 150px;
+    
+}
+
+.navbar-brand {
+    
+    vertical-align: auto;
+    
+}
+
+.link {
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+}
