@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap/'
-import "../AddTransactionButton/AddTransactionButton.css"
+import "./AddTransactionButton.css"
 import { Link } from "react-router-dom";
 
 export default function AddTransactionButton(props) {

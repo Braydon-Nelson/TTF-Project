@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SubmitTransaction from "../../dashboard_components/SubmitTransaction";
+import SubmitTransaction from "../SubmitTransaction";
 import DatePicker from "react-datepicker";
 import { FormControl, Container, InputGroup, Dropdown, DropdownButton } from 'react-bootstrap/'
 

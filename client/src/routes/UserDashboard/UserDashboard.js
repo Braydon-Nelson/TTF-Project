@@ -1,10 +1,11 @@
 import React from "react";
 import "./UserDashboard.css";
 
-import TransactionHist from "../../dashboard_components/TransactionHist";
-import LineGraph from "../../dashboard_components/LineGraph";
-import PieChart from "../../dashboard_components/PieChart";
-import AddTransactionButton from "../../dashboard_components/AddTransactionButton";
+
+import TransactionHist from "../../components/TransactionHist";
+import LineGraph from "../../components/LineGraph";
+import PieChart from "../../components/PieChart";
+import AddTransactionButton from "../../components/AddTransactionButton";
 import { Tabs, Tab, Container, Row, Col } from 'react-bootstrap/'
 
 

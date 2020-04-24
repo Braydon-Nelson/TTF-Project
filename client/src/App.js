@@ -4,8 +4,9 @@ import React from 'react';
 // import './App.css';
 import AddTransaction from "./routes/AddTransaction";
 import UserDashboard from "./routes/UserDashboard";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { BrowserRouter as Router, Route} from "react-router-dom";
 
 import Navigation from './components/Navigation';
 import LandingPage from './pages/Landing';

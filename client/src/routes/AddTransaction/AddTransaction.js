@@ -1,7 +1,8 @@
 import React from "react";
-import AddTransactionButton from '../../dashboard_components/AddTransactionButton';
+import AddTransactionButton from '../../components/AddTransactionButton';
 // import AddTransaction from './index'
-import FormInput from '../../dashboard_components/Form/Form.js';
+import FormInput from "../../components/Form";
+
 
 export default function AddTransaction() {
 
