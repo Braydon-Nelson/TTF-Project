@@ -1,5 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+//NOTICE Tyler temporarily commented this out to get it to compile
+// import './App.css';
+import AddTransaction from "./routes/AddTransaction";
+import UserDashboard from "./routes/UserDashboard";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { BrowserRouter as Router, Route} from "react-router-dom";
 
 import Navigation from './components/Navigation';
 import LandingPage from './pages/Landing';
@@ -16,6 +23,9 @@ import * as ROUTES from "./constants/routes";
 
 const App = () => (
     <Router>
+  
+
+
         <div>
             <Navigation />
             <hr />
@@ -29,7 +39,17 @@ const App = () => (
             <Route path={ROUTES.HOME} component={HomePage} />
             <Route path={ROUTES.ACCOUNT} component={AccountPage} />
             <Route path={ROUTES.ADMIN} component={AdminPage} />
+
+
+
+            <Route path="/dashboard" component={UserDashboard} />
+
+            <Route path="/addTransaction" component={AddTransaction} />
+
+
+
         </div>
     </Router>
 );
+
 export default withAuthentication(App);

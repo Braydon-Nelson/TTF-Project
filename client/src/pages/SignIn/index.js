@@ -8,7 +8,6 @@ import * as ROUTES from '../../constants/routes';
 
 
 
-
 const SignInPage = () => (
     <div>
         <h1>SignIn</h1>
@@ -22,6 +21,9 @@ const INITIAL_STATE = {
     password: '',
     error: null,
 };
+
+
+
 class SignInFormBase extends Component {
     constructor(props) {
         super(props);
