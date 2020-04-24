@@ -4,14 +4,18 @@ import * as ROUTES from '../../constants/routes';
 import SignOutButton from '../SignOut';
 import { AuthUserContext } from '../Session';
 import { Navbar, Nav } from 'react-bootstrap'
+import "./style.css"
+import Col from '../Col';
+import Row from '../Row';
+import "./style.css"
 
 
 const Navigation = () => (
 
 
-    <Navbar bg="dark" variant="light">
+    <Navbar className="navback d-flex justify-content-center " >
 
-        <Nav className="mr-auto ">
+        <Nav>
             <AuthUserContext.Consumer>
                 {authUser =>
                     authUser ? <NavigationAuth /> : <NavigationNonAuth />
@@ -27,32 +31,40 @@ const Navigation = () => (
 
 
 const NavigationAuth = () => (
-    <div>
+    <div >
+        <Col size="md-12">
+            <Link className="navbar-brand link" to={ROUTES.LANDING}>Landing</Link>
 
-        <Link className="navbar-brand" to={ROUTES.LANDING}>Landing</Link>
 
+            <Link className="navbar-brand link text-center" to={ROUTES.HOME}>Home</Link>
 
-        <Link className="navbar-brand" to={ROUTES.HOME}>Home</Link>
-
-        <Link className="navbar-brand" to={ROUTES.ACCOUNT}>Account</Link>
-
-        <Link className="navbar-brand" to={ROUTES.ADMIN}>Admin</Link>
+            <Link className="navbar-brand link text-center" to={ROUTES.ACCOUNT}>Account</Link>
 
 
 
-        <SignOutButton />
 
 
+            <SignOutButton />
+
+        </Col>
     </div>
 
 );
 const NavigationNonAuth = () => (
 
     <div>
-        <Link className="navbar-brand" to={ROUTES.LANDING}>Landing</Link>
+        <Row>
 
+            <Col size="md-6" >
+                <Link className="navbar-brand link text-center " to={ROUTES.LANDING}>Home</Link>
 
-        <Link className="navbar-brand" to={ROUTES.SIGN_IN}>Sign In</Link>
+            </Col>
+            <Col size="md-6" >
+
+                <Link className="navbar-brand link text-center" to={ROUTES.SIGN_IN}>Sign In</Link>
+            </Col>
+
+        </Row>
     </div>
 
 );

@@ -1,0 +1,25 @@
+body {
+    background-image: url(../../images/3.jpg);
+    background-size: cover;
+    background-position: center;
+    
+   height: 100vh;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    margin-top: -10px;
+    color: black;
+}
+
+h2 {
+    margin-top: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    
+}
+
+.landingcard {
+   
+}
