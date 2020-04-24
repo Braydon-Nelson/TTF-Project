@@ -19,6 +19,7 @@ import AdminPage from './pages/Admin';
 import { withAuthentication } from './components/Session';
 
 import * as ROUTES from "./constants/routes";
+import Footer from './components/Footer';
 
 
 const App = () => (
@@ -46,7 +47,7 @@ const App = () => (
 
             <Route path="/addTransaction" component={AddTransaction} />
 
-
+            <Footer />
 
         </div>
     </Router>
