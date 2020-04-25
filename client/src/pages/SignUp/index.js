@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
+import axios from 'axios';
 
 import { withFirebase } from '../../components/Firebase';
 import * as ROUTES from '../../constants/routes';
-
-
 
 const SignUpPage = () => (
   <div>
@@ -46,6 +45,26 @@ const INITIAL_STATE = {
             username,
             email,
           });
+      })
+      .then(()=> {
+        //build out a function to post the username and email to the database
+        // username = this.state.username
+        // email = this.state.email
+        console.log(this.state);
+        axios.post('/api/user/adduser', {
+          "username": this.state.username,
+          "email": this.state.email
+      })
+        .then(function (response) {
+          // handle success
+          console.log(response);
+        })
+        .catch(function (error) {
+          // handle error
+          console.log(error);
+        })
+
+        
       })
       .then(() => {
         this.setState({ ...INITIAL_STATE });
