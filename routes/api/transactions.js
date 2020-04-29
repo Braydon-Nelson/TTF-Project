@@ -10,7 +10,6 @@ router
 // Matches with "/api/transactions/:id"
 router
     .route("/:id")
-    .put(transactionsController.update)
-    .delete(transactionsController.remove);
+    .get(transactionsController.findAll);
 
 module.exports = router;

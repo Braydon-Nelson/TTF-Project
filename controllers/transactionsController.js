@@ -3,7 +3,7 @@ const db = require("../models");
 // Defining methods for the bookController
 module.exports = {
     findAll: function (req, res) {
-        db.Transactions.find(req.query)
+        db.Transactions.find({ userID: req.params.id }, req.query)
             .then(dbTransactions => res.json(dbTransactions))
             .catch(err => res.status(400).json(err));
     },
