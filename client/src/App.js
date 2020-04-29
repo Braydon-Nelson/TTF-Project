@@ -3,7 +3,6 @@ import React from 'react';
 //NOTICE Tyler temporarily commented this out to get it to compile
 // import './App.css';
 import AddTransaction from "./routes/AddTransaction";
-import UserDashboard from "./routes/UserDashboard";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -43,7 +42,7 @@ const App = () => (
 
 
 
-            <Route path="/dashboard" component={UserDashboard} />
+            
 
             <Route path="/addTransaction" component={AddTransaction} />
 

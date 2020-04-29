@@ -1,24 +1,47 @@
-import React from "react";
-import { Button } from 'react-bootstrap/'
+// import React from "react";
+// import axios from 'axios';
+// import { Button } from 'react-bootstrap/'
+// import { AuthUserContext, withAuthorization } from '../../components/Session';
+// import { withFirebase } from '../../components/Firebase';
 
 
-export default function SubmitTransaction() {
+// // import Transactions from "../../../../models/transactions";
+
+// onSubmit = event => {
+//     event.preventDefault();
+//     console.log(authUser.username)
+//     // axios.get('api/user/user/'+authUser.username)
+//     // axios.post('/api/transactions')
+// }
+
+// export default function SubmitTransaction() {
 
 
 
-    return (
-        <div>
+//     return (
+//         <AuthUserContext.Consumer>
+//             {authUser => (
+//                 <div>
 
-            <Button variant="warning" size="lg" block className="SubmitTransactionButton">
-               Submit Transaction
-            </Button>
+//                     <Button variant="warning" size="lg" block className="SubmitTransactionButton" onSubmit={onSubmit}>
+//                         Submit Transaction
+//             </Button>
 
-        </div>
+//                 </div>
+//             )}
 
-        //need it to pop-up with the form input group upon clicking
-    );
+//         </AuthUserContext.Consumer>
 
-};
+//     );
+
+// };
+
+
+
+
+
+
+
 
 
 
@@ -41,5 +64,3 @@ export default function SubmitTransaction() {
 
 // if amount negative and type is increment, multiply value by negative 1.
 
-
-// if transaction.amount = 

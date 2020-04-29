@@ -1,18 +1,21 @@
 import React from 'react';
 import { Table } from 'react-bootstrap/'
-import { transactions } from "../../data/transactions";
+import { transactions } from "../../util/API";
 
 
 export default function TransactionHist(props) {
 
-    // const {
-    //     name,
-    //     date,
-    //     amount,
-    //     type,
-    //     category,
-    //     comments
-    // } = props;
+    const {
+        // name,
+        // date,
+        // amount,
+        // type,
+        // category,
+        // comments
+
+
+        transactions
+    } = props;
 
     //figure out how to add a date sort function!
 
@@ -31,7 +34,7 @@ export default function TransactionHist(props) {
                 </thead>
                 <tbody>
                     {transactions.map(Row => (
-                        <tr>
+                        <tr key={Row.name}>
                             <td>{Row.name}</td>
                             <td>{Row.date}</td>
                             <td>{Row.amount}</td>

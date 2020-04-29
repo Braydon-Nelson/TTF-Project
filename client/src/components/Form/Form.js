@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SubmitTransaction from "../SubmitTransaction";
 import DatePicker from "react-datepicker";
-import { FormControl, Container, InputGroup, Dropdown, DropdownButton } from 'react-bootstrap/'
+import { Row, Col, Input, InputGroup, Container, FormControl, Dropdown, DropdownButton } from 'react-bootstrap/'
 
 import "react-datepicker/dist/react-datepicker.css";
 

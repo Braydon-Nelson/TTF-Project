@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
+import { transactions } from "../../util/API";
 
 import { Polar } from 'react-chartjs-2';
 
+
+
+let pieData = [];
+let labelData = [];
+transactions.forEach(transaction => {
+    if (transaction.type === "Expense") {
+        pieData.push(parseFloat(transaction.amount));
+        labelData.push(transaction.category)
+    }
+
+
+});
+
 const data = {
     datasets: [{
-        data: [
-            70,
-            150,
-            35,
-            68,
-            75
-        ],
+        data: pieData,
+
         backgroundColor: [
             '#FF6384',
             '#4BC0C0',
@@ -21,13 +30,7 @@ const data = {
         label: 'Monthly Spending Summary' // for legend
     }],
 
-    labels: [
-        'Utilities',
-        'Rent/Mortgage',
-        'Food/Groceries',
-        'Shopping/Retail',
-        'Education'
-    ]
+    labels: labelData
 };
 
 export default class PolarDemo extends Component {
@@ -41,3 +44,6 @@ export default class PolarDemo extends Component {
     }
 
 }
+
+
+
