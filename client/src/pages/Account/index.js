@@ -2,15 +2,19 @@ import React from 'react';
 import { PasswordForgetForm } from '../PasswordForget';
 import PasswordChangeForm from '../../components/PasswordChange';
 import { AuthUserContext, withAuthorization } from '../../components/Session';
+import Container from "../../components/Container"
+
 
 const AccountPage = () => (
     <AuthUserContext.Consumer>
         {authUser => (
-            <div>
+
+            <Container>
                 <h1>Account: {authUser.email}</h1>
                 <PasswordForgetForm />
                 <PasswordChangeForm />
-            </div>
+            </Container>
+
         )}
     </AuthUserContext.Consumer>
 );

@@ -141,8 +141,8 @@ const INITIAL_STATE = {
 
 
 const SignUpLink = () => (
-  <p>
-    Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+  <p  style={{ color: "black", fontSize: "18px" }} className="text-center mr-2">
+    Don't have an account? <Link style={{ color: "black", fontSize: "21px" }} to={ROUTES.SIGN_UP}>Sign Up</Link>
   </p>
 );
 
