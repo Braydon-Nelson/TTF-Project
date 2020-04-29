@@ -1,8 +1,21 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
+import { transactions } from "../../util/API";
+
+
+let chartData = [];
+let labelData = [];
+let runningTotal = 0;
+transactions.forEach(transaction => {
+  runningTotal += parseFloat(transaction.amount)
+  chartData.push(runningTotal);
+  labelData.push(transaction.date)
+
+});
+
 
 const data = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  labels: labelData,
 
   datasets: [
     {
@@ -24,7 +37,7 @@ const data = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [500, 2000, 3100, 900, 2100, 7000, 4000]
+      data: chartData
     }
   ]
 };

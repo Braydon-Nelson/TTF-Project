@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import SubmitTransaction from "../SubmitTransaction";
 import DatePicker from "react-datepicker";
-import { FormControl, Container, InputGroup, Dropdown, DropdownButton } from 'react-bootstrap/'
-
+import { Row, Col, Input, InputGroup, Container, FormControl, Dropdown, DropdownButton } from 'react-bootstrap/'
 import "react-datepicker/dist/react-datepicker.css";
+import "./Form.css"
 
 // CSS Modules, react-datepicker-cssmodules.css
 // import 'react-datepicker/dist/react-datepicker-cssmodules.css';
@@ -53,7 +53,7 @@ export default function NewForm() {
 
                 <DropdownButton
                     as={InputGroup.Append}
-                    variant="outline-secondary"
+                    variant="secondary"
                     title="Dropdown"
                     id="input-group-dropdown-2"
                 >
@@ -72,7 +72,7 @@ export default function NewForm() {
 
                 <DropdownButton
                     as={InputGroup.Append}
-                    variant="outline-secondary"
+                    variant="secondary"
                     title="Dropdown"
                     id="input-group-dropdown-1"
                 >

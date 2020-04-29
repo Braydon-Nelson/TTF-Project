@@ -26,6 +26,10 @@ function submitForm(authUser) {
     console.log("Form not sent yet");
 }
 
+
+
+
+
 //axios call to get it to post
 
 //multiply by 1 or -1 
@@ -45,5 +49,3 @@ function submitForm(authUser) {
 
 // if amount negative and type is increment, multiply value by negative 1.
 
-
-// if transaction.amount = 
