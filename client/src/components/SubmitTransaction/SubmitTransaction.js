@@ -1,26 +1,30 @@
 import React from "react";
 import { Button } from 'react-bootstrap/'
+import { AuthUserContext, withAuthorization } from '../Session';
 
 
-export default function SubmitTransaction() {
+const SubmitTransaction = () => (
 
+    <AuthUserContext.Consumer>
+        {authUser => (
 
-
-    return (
-        <div>
-
-            <Button variant="warning" size="lg" block className="SubmitTransactionButton">
-               Submit Transaction
+            <Button variant="warning" size="lg" block onClick={submitForm} className="SubmitTransactionButton">
+                Submit Transaction
             </Button>
 
-        </div>
+        )}
+    </AuthUserContext.Consumer>
 
-        //need it to pop-up with the form input group upon clicking
-    );
+);
 
-};
+const condition = authUser => !!authUser;
 
 
+export default withAuthorization(condition)(SubmitTransaction);
+
+function submitForm(authUser) {
+    console.log("Form not sent yet");
+}
 
 //axios call to get it to post
 
