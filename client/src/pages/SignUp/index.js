@@ -20,6 +20,7 @@ const INITIAL_STATE = {
     email: '',
     passwordOne: '',
     passwordTwo: '',
+    uid: '',
     error: null,
   };
 
@@ -39,6 +40,7 @@ const INITIAL_STATE = {
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
         // Create a user in your Firebase realtime database
+        this.state.uid = authUser.user.uid;
         return this.props.firebase
           .user(authUser.user.uid)
           .set({
@@ -50,10 +52,10 @@ const INITIAL_STATE = {
         //build out a function to post the username and email to the database
         // username = this.state.username
         // email = this.state.email
-        console.log(this.state);
         axios.post('/api/user/adduser', {
           "username": this.state.username,
-          "email": this.state.email
+          "email": this.state.email,
+          "uid": this.state.uid
       })
         .then(function (response) {
           // handle success

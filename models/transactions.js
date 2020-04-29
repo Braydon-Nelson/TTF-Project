@@ -29,7 +29,7 @@ const transactionSchema = new Schema(
         comment: {
             type: String
         },
-        userID: {
+        uid: {
             type: String,
             trime: true
         }
