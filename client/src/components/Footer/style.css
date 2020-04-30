@@ -3,7 +3,11 @@ footer {
     margin-top: 0px;
     position: absolute;
     bottom: 0;
+    left:0;
     width: 100vw; 
     background-color:rgba(127, 223, 255,0.6);
+    
+  
+  
     
 }

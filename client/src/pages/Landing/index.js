@@ -13,11 +13,11 @@ function Landing() {
     return (
 
         <div className="background">
-            <Container>
+            <Container style={{ paddingBottom: "40px" }}>
                 <Row>
                     <Col size="md-4" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "56px", height: "430px" }} >
                         <h2 className="text-center">Keep track of your spending with</h2>
-                        <h1 className="text-center">TTF</h1>
+                        <h1 className="text-center" style={{ fontSize: "80px" }}>TTF</h1>
                     </Col>
                 </Row>
             </Container>

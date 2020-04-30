@@ -2,16 +2,51 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withFirebase } from '../../components/Firebase';
 import * as ROUTES from '../../constants/routes';
+import Col from '../../components/Col'
+import Row from '../../components/Row'
+import Container from "../../components/Container"
+
 const PasswordForgetPage = () => (
-    <div>
-        <h1>PasswordForget</h1>
-        <PasswordForgetForm />
-    </div>
+    // <div>
+    //     <h1>PasswordForget</h1>
+    //     <PasswordForgetForm />
+    // </div>
+    < Container style={{ paddingBottom: "40px" }}>
+
+        <Row >
+            <Col size="md-4" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "56px", height: "430px" }} >
+                <h1 className="text-center" style={{ marginTop: "18px", fontSize: "60px" }}>Forgot Password</h1>
+
+                <Row>
+                    <Col size="md-2"></Col>
+                    <Col size="md-8" >
+                        <div className="ml-2">
+                            <PasswordForgetForm />
+
+                        </div>
+
+                    </Col>
+                    <Col size="md-2"></Col>
+
+                </Row>
+                <h2 style={{ marginTop: "20px", fontSize: "30px", paddingLeft: "30px", paddingRight: "30px" }} className="text-center ">Check your inbox for an email to reset your password</h2>
+            </Col>
+        </Row>
+    </Container >
 );
+
+
+
+
+
 const INITIAL_STATE = {
     email: '',
     error: null,
 };
+
+
+
+
 class PasswordForgetFormBase extends Component {
     constructor(props) {
         super(props);
