@@ -2,15 +2,37 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 import axios from 'axios';
+import Container from "../../components/Container"
+import Col from '../../components/Col'
+import Row from '../../components/Row'
 
 import { withFirebase } from '../../components/Firebase';
 import * as ROUTES from '../../constants/routes';
 
 const SignUpPage = () => (
-  <div>
-    <h1>SignUp</h1>
-    <SignUpForm />
-  </div>
+
+
+< Container style={{ paddingBottom: "40px" }}>
+
+<Row >
+    <Col size="md-4" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "56px", height: "430px" }} >
+        <h1 className="text-center" style={{ marginTop: "10px"}}>Sign Up!</h1>
+
+        <Row>
+            <Col size="md-2"></Col>
+            <Col size="md-8" >
+                <div >
+                <SignUpForm />
+                </div>
+
+            </Col>
+            <Col size="md-2"></Col>
+
+        </Row>
+       
+    </Col>
+</Row>
+</Container >
 );
 
 
@@ -103,6 +125,7 @@ const INITIAL_STATE = {
     return (
       <form onSubmit={this.onSubmit}>
         <input
+        className="mt-4 ml-4"
           name="username"
           value={username}
           onChange={this.onChange}
@@ -110,6 +133,7 @@ const INITIAL_STATE = {
           placeholder="Full Name"
         />
         <input
+        className="mt-4 ml-4"
           name="email"
           value={email}
           onChange={this.onChange}
@@ -117,6 +141,7 @@ const INITIAL_STATE = {
           placeholder="Email Address"
         />
         <input
+        className="mt-4 ml-4"
           name="passwordOne"
           value={passwordOne}
           onChange={this.onChange}
@@ -124,13 +149,14 @@ const INITIAL_STATE = {
           placeholder="Password"
         />
         <input
+        className="mt-4 ml-4"
           name="passwordTwo"
           value={passwordTwo}
           onChange={this.onChange}
           type="password"
           placeholder="Confirm Password"
         />
-        <button disabled={isInvalid} type="submit">
+        <button disabled={isInvalid} type="submit" className="mt-4  mr-4" style={{  marginLeft: "66px"}} >
             Sign Up
             </button>
         {error && <p>{error.message}</p>}
