@@ -7,10 +7,7 @@ import Row from '../../components/Row'
 import Container from "../../components/Container"
 
 const PasswordForgetPage = () => (
-    // <div>
-    //     <h1>PasswordForget</h1>
-    //     <PasswordForgetForm />
-    // </div>
+
     < Container style={{ paddingBottom: "40px" }}>
 
         <Row >

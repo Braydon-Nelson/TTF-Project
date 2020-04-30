@@ -17,7 +17,7 @@ const SignInPage = () => (
         <Container style={{ paddingBottom: "40px" }}>
             <Row >
                 <Col size="md-4" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "56px", height: "430px" }} >
-                    <h1 className="text-center" style={{ marginTop: "15px" }}>Sign In</h1>
+                    <h1 className="text-center" style={{ marginTop: "10px" }}>Sign In</h1>
                     <SignInForm />
                     <Row>
                         <Col size="md-2"></Col>
@@ -107,7 +107,7 @@ class SignInFormBase extends Component {
                 </Row>
                 <Row>
                     <Col size="md-4"></Col>
-                    <Col size="md-6" className="ml-4 mt-4">
+                    <Col size="md-6" className="ml-4  mt-4">
                         <button disabled={isInvalid} type="submit">
                             Sign In
         </button>
