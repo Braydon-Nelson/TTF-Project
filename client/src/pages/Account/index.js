@@ -30,7 +30,7 @@ const AccountPage = () => (
 
 
 
-            < Container >
+            < Container style={{ marginBottom: "52px" }}>
 
                 <Row >
                     <Col size="md-4" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "56px", height: "430px" }} >
@@ -56,7 +56,7 @@ const AccountPage = () => (
                         </Row>
                     </Col>
                 </Row>
-            </Container>
+            </Container >
 
             // <Container>
             //     <h1>Account: {authUser.email}</h1>
