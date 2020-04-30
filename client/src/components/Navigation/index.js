@@ -32,22 +32,25 @@ const Navigation = () => (
 
 const NavigationAuth = () => (
     <div >
-        <Col size="md-12">
-            <Link className="navbar-brand link" to={ROUTES.LANDING}>Landing</Link>
-
-
-            <Link className="navbar-brand link text-center" to={ROUTES.HOME}>Home</Link>
-
-            <Link className="navbar-brand link text-center" to={ROUTES.ACCOUNT}>Account</Link>
+        <Row>
+            <Col size="md-4">
 
 
 
+                <Link className="navbar-brand link text-center" to={ROUTES.HOME}>Home</Link>
+            </Col>
+            <Col size="md-4">
+                <Link className="navbar-brand link text-center" to={ROUTES.ACCOUNT}>Account</Link>
+            </Col>
 
 
-            <SignOutButton />
 
-        </Col>
-    </div>
+            <Col size="md-4" className="ml-4 mt-4">
+                <SignOutButton />
+            </Col>
+        </Row >
+
+    </div >
 
 );
 const NavigationNonAuth = () => (
