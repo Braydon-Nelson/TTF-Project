@@ -12,6 +12,10 @@ const userSchema = new Schema(
         email: {
             type: String,
             required: "Enter an email"
+        },
+        uid: {
+            type: String,
+            required: "Please supply a uid from Firebase"
         }
     }
 );

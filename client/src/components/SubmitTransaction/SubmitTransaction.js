@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios';
 import { Button } from 'react-bootstrap/'
 import { AuthUserContext, withAuthorization } from '../Session';
 
@@ -24,6 +25,15 @@ export default withAuthorization(condition)(SubmitTransaction);
 
 function submitForm(authUser) {
     console.log("Form not sent yet");
+    axios.post("/api/transactions", {
+        name: name,
+        date: date,
+        amount: amount,
+        type: type,
+        category: category,
+        comment: comment,
+        uid: authUser.user.uid
+    })
 }
 
 
