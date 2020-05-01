@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SubmitTransaction from "../SubmitTransaction";
+// import SubmitTransaction from "../SubmitTransaction";
 import DatePicker from "react-datepicker";
 import { Form, Button, Row, Col, Input, InputGroup, Container, FormControl, Dropdown, DropdownButton } from 'react-bootstrap/'
 import "react-datepicker/dist/react-datepicker.css";
@@ -34,6 +34,7 @@ export default function NewForm() {
 
                 <Container className="formContainer">
                     <Form>
+                        <br></br>
                         <InputGroup className="mb-3" id="TransactionName">
                             <InputGroup.Prepend>
                                 <InputGroup.Text id="inputGroup-sizing-default">Transaction Name</InputGroup.Text>
@@ -41,10 +42,12 @@ export default function NewForm() {
                             <FormControl id="TransactionName" aria-describedby="inputGroup-sizing-default" />
                         </InputGroup>
 
+
                         <DatePicker className="mb-3"
                             selected={startDate}
                             id="TransactionDate" onChange={handleChange}
                         />
+
 
                         <InputGroup className="mb-3">
                             <InputGroup.Prepend>
@@ -58,53 +61,28 @@ export default function NewForm() {
                         </InputGroup>
 
 
-                        <InputGroup
-                            className={`mb-3`}
-                        >
-                            <FormControl
-                                id="TransactionType"
-                                placeholder="Transaction Type"
-                                aria-label="Transaction Type"
-                                aria-describedby="basic-addon2"
-                                id="TransactionType"
-                            />
-
-                            <DropdownButton
-                                as={InputGroup.Append}
-                                variant="secondary"
-                                title="Dropdown"
-                                id="input-group-dropdown-2"
-                            >
-                                <Dropdown.Item>Income</Dropdown.Item>
-                                <Dropdown.Item>Expense</Dropdown.Item>
-                            </DropdownButton>
-                        </InputGroup>
+                        <Form.Group id="TransactionType">
+                            <Form.Label>Transaction Type</Form.Label>
+                            <Form.Control as="select" size="sm" custom>
+                                <option>Income</option>
+                                <option>Expense</option>
+                            </Form.Control>
+                        </Form.Group>
 
 
-                        <InputGroup className="mb-3" id="TransactionCategory">
-                            <FormControl
-                                id="TransactionCategory"
-                                placeholder="Transaction Category"
-                                aria-label="Transaction Category"
-                                aria-describedby="basic-addon2"
-                            />
+                        <Form.Group id="TransactionCategory">
+                            <Form.Label>Transaction Category</Form.Label>
+                            <Form.Control as="select" size="sm" custom>
+                                <option>Utilities</option>
+                                <option>Rent/Mortgage</option>
+                                <option>Education</option>
+                                <option>Groceries or Dining</option>
+                                <option>Shopping or Retail</option>
+                                <option>Other</option>
+                            </Form.Control>
+                        </Form.Group>
 
-                            <DropdownButton
-                                as={InputGroup.Append}
-                                variant="secondary"
-                                title="Dropdown"
-                                id="input-group-dropdown-1"
-                            >
-
-                                <Dropdown.Item href="#">Rent/Mortgage</Dropdown.Item>
-                                <Dropdown.Item href="#">Utilities</Dropdown.Item>
-                                <Dropdown.Item href="#">Groceries or Dining </Dropdown.Item>
-                                <Dropdown.Item href="#">Retail/Shopping</Dropdown.Item>
-                                <Dropdown.Item href="#">Education</Dropdown.Item>
-                                <Dropdown.Item href="#">Other</Dropdown.Item>
-                            </DropdownButton>
-                        </InputGroup>
-
+                        <br></br>
 
                         <InputGroup id="TransactionComments">
                             <InputGroup.Prepend>
@@ -118,6 +96,8 @@ export default function NewForm() {
                         <Button variant="warning" size="lg" block onClick={submitForm} type="submit" className="SubmitTransactionButton">
                             Submit Transaction
                      </Button>
+
+                        <br></br>
                     </Form>
 
 
