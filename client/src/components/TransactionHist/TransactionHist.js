@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from 'react-bootstrap/'
+import { Container, Table } from 'react-bootstrap/'
 import { transactions } from "../../util/API";
 
 
@@ -20,12 +20,12 @@ export default function TransactionHist(props) {
     //figure out how to add a date sort function!
 
     return (
-        <div>
-             <div>
-                <h2>Individual Transactions</h2>
-                
-            </div>
-            <Table striped bordered hover>
+        <Container fluid>
+
+                <h2>Activity Details</h2>
+
+            <Table responsive striped bordered hover>
+
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -49,7 +49,8 @@ export default function TransactionHist(props) {
                     ))}
                 </tbody>
             </Table>
-        </div>
+
+        </Container>
     );
 
 };

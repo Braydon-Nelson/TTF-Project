@@ -93,7 +93,7 @@ export default function NewForm() {
 
                         <br></br>
 
-                        <Button variant="warning" size="lg" block onClick={submitForm} type="submit" className="SubmitTransactionButton">
+                        <Button variant="warning" size="lg" block onClick={submitForm} className="SubmitTransactionButton">
                             Submit Transaction
                      </Button>
 
