@@ -1,3 +1,3 @@
-import FormInput from "./Form.js"
+import ValidatedForm from "./Form.js"
 
-export default FormInput
+export default ValidatedForm

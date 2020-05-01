@@ -15,11 +15,6 @@ function HomePage() {
 
     function addTransactionHandler(e) {
         console.log(e);
-        // API.saveBook({
-        //     title: formObject.title,
-        //     author: formObject.author,
-        //     synopsis: formObject.synopsis
-        //   })
     };
 
 
@@ -36,37 +31,33 @@ function HomePage() {
 
 
 
-    // function loadBooks() {
-    //     API.getBooks()
-    //       .then(res => 
-    //         setBooks(res.data)
-    //       )
-    //       .catch(err => console.log(err));
-    //   };
-
-
 
     return (
         <div className="dashboardBackground">
 
-            <Container>
+          
+                <Container fluid className = "dashboardBackground">
 
-                <Tabs defaultActiveKey="table" id="uncontrolled-tab-example">
-                    <Tab eventKey="table" title="Transaction Details">
-                        <TransactionHist transactions={transactions} />
-                    </Tab>
-                    <Tab eventKey="piechart" title="Spending Categories">
-                        <PieChart />
-                    </Tab>
-                    <Tab eventKey="barchart" title="Balance History">
-                        <LineGraph />
-                    </Tab>
-                </Tabs>
+                    <Tabs defaultActiveKey="table" id="uncontrolled-tab-example">
+                        <Tab eventKey="table" title="Transaction Details">
+                            <TransactionHist transactions={transactions} />
+                        </Tab>
+                        <Tab eventKey="piechart" title="Spending Categories">
+                            <PieChart />
+                        </Tab>
+                        <Tab eventKey="barchart" title="Balance History">
+                            <LineGraph />
+                        </Tab>
+                    </Tabs>
 
-            </Container >
+                </Container >
+
+    
 
             <AddTransactionButton onClick={addTransactionHandler}>
             </AddTransactionButton>
+
+
 
         </div >
     );
