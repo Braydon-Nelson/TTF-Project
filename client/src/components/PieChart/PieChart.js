@@ -19,7 +19,7 @@ transactions.forEach(transaction => {
 const data = {
     datasets: [{
         data: pieData,
-
+        // responsive: true,
         backgroundColor: [
             '#FF6384',
             '#4BC0C0',
@@ -33,6 +33,10 @@ const data = {
     labels: labelData
 };
 
+
+
+
+
 export default class PolarDemo extends Component {
     render() {
         return (
@@ -44,6 +48,8 @@ export default class PolarDemo extends Component {
     }
 
 }
+
+
 
 
 

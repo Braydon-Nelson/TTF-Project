@@ -33,7 +33,7 @@ function HomePage() {
 
 
     return (
-        // <div className="dashboardBackground">
+
 
 
         <Container fluid className="dashboardBackground">
@@ -50,18 +50,12 @@ function HomePage() {
                 </Tab>
             </Tabs>
 
-        {/* </Container > */}
+            <AddTransactionButton onClick={addTransactionHandler}>
+            </AddTransactionButton>
+
+        </Container >
 
 
-
-        <AddTransactionButton onClick={addTransactionHandler}>
-        </AddTransactionButton>
-
-</Container >
-
-
-
-    // </div >
     );
 }
 
