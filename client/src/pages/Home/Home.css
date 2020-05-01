@@ -1,4 +1,8 @@
 .dashboardBackground{
+    /* height: 80vh;
+    width: 75vw;
+    align-content: center; */
+    margin: 20px;
     background-color: white;
     opacity: 89%;
 }

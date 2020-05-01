@@ -21,6 +21,10 @@ export default function TransactionHist(props) {
 
     return (
         <div>
+             <div>
+                <h2>Individual Transactions</h2>
+                
+            </div>
             <Table striped bordered hover>
                 <thead>
                     <tr>
