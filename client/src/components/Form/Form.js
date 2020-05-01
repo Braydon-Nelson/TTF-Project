@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import SubmitTransaction from "../SubmitTransaction";
 import DatePicker from "react-datepicker";
 import { Form, Button, Row, Col, Input, InputGroup, Container, FormControl, Dropdown, DropdownButton } from 'react-bootstrap/'
 import "react-datepicker/dist/react-datepicker.css";
@@ -26,6 +25,22 @@ export default function NewForm() {
 
     function submitForm(authUser) {
         console.log("Form not sent yet");
+        console.log(document.getElementById('TransactionName').value,
+            document.getElementById('TransactionDate').value,
+            document.getElementById('TransactionAmount').value,
+            document.getElementById('TransactionType').value,
+            document.getElementById('TransactionCategory').value,
+            document.getElementById('TransactionComments').value);
+
+        // axios.post("/api/transactions", {
+        //     name: document.getElementById('TransactionName').value,
+        //     date: document.getElementById('TransactionDate').value,
+        //     amount: document.getElementById('TransactionAmount').value,
+        //     type: document.getElementById('TransactionType').value,
+        //     category: document.getElementById('TransactionCategory').value,
+        //     comment: document.getElementById('TransactionComments').value,
+        //     uid: authUser.user.uid
+        // })
     }
 
     return (
@@ -34,7 +49,7 @@ export default function NewForm() {
 
                 <Container className="formContainer">
                     <Form>
-                        <InputGroup className="mb-3" id="TransactionName">
+                        <InputGroup className="mb-3">
                             <InputGroup.Prepend>
                                 <InputGroup.Text id="inputGroup-sizing-default">Transaction Name</InputGroup.Text>
                             </InputGroup.Prepend>
@@ -81,7 +96,7 @@ export default function NewForm() {
                         </InputGroup>
 
 
-                        <InputGroup className="mb-3" id="TransactionCategory">
+                        <InputGroup className="mb-3" >
                             <FormControl
                                 id="TransactionCategory"
                                 placeholder="Transaction Category"
@@ -106,7 +121,7 @@ export default function NewForm() {
                         </InputGroup>
 
 
-                        <InputGroup id="TransactionComments">
+                        <InputGroup>
                             <InputGroup.Prepend>
                                 <InputGroup.Text>Comments</InputGroup.Text>
                             </InputGroup.Prepend>
@@ -115,7 +130,7 @@ export default function NewForm() {
 
                         <br></br>
 
-                        <Button variant="warning" size="lg" block onClick={submitForm} type="submit" className="SubmitTransactionButton">
+                        <Button variant="warning" size="lg" block onClick={submitForm} className="SubmitTransactionButton">
                             Submit Transaction
                      </Button>
                     </Form>
