@@ -49,7 +49,7 @@ export default function NewForm() {
                         />
 
 
-                        <InputGroup className="mb-3">
+                        <InputGroup className="mb-3" id="TransactionAmount">
                             <InputGroup.Prepend>
                                 <InputGroup.Text>$</InputGroup.Text>
                                 <InputGroup.Text>0.00</InputGroup.Text>
