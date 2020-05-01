@@ -35,7 +35,7 @@ export default function NewForm() {
                 <Container className="formContainer">
                     <Form>
                         <br></br>
-                        <InputGroup className="mb-3" id="TransactionName">
+                        <InputGroup className="mb-3">
                             <InputGroup.Prepend>
                                 <InputGroup.Text id="inputGroup-sizing-default">Transaction Name</InputGroup.Text>
                             </InputGroup.Prepend>
@@ -49,7 +49,7 @@ export default function NewForm() {
                         />
 
 
-                        <InputGroup className="mb-3" id="TransactionAmount">
+                        <InputGroup className="mb-3">
                             <InputGroup.Prepend>
                                 <InputGroup.Text>$</InputGroup.Text>
                                 <InputGroup.Text>0.00</InputGroup.Text>
@@ -61,18 +61,18 @@ export default function NewForm() {
                         </InputGroup>
 
 
-                        <Form.Group id="TransactionType">
+                        <Form.Group>
                             <Form.Label>Transaction Type</Form.Label>
-                            <Form.Control as="select" size="sm" custom>
+                            <Form.Control as="select" size="sm" custom id="TransactionType">
                                 <option>Income</option>
                                 <option>Expense</option>
                             </Form.Control>
                         </Form.Group>
 
 
-                        <Form.Group id="TransactionCategory">
+                        <Form.Group>
                             <Form.Label>Transaction Category</Form.Label>
-                            <Form.Control as="select" size="sm" custom>
+                            <Form.Control as="select" size="sm" custom id="TransactionCategory">
                                 <option>Utilities</option>
                                 <option>Rent/Mortgage</option>
                                 <option>Education</option>
@@ -84,7 +84,7 @@ export default function NewForm() {
 
                         <br></br>
 
-                        <InputGroup id="TransactionComments">
+                        <InputGroup>
                             <InputGroup.Prepend>
                                 <InputGroup.Text>Comments</InputGroup.Text>
                             </InputGroup.Prepend>
