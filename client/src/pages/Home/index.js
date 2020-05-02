@@ -36,7 +36,7 @@ function HomePage() {
 
 
 
-        <Container fluid className="dashboardBackground">
+        <Container className="dashboardBackground">
 
             <Tabs defaultActiveKey="table" id="uncontrolled-tab-example">
                 <Tab eventKey="table" title="Transaction Details">

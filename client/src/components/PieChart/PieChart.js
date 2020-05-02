@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { transactions } from "../../util/API";
-
+import { Row, Col } from 'react-bootstrap/'
 import { Polar } from 'react-chartjs-2';
 
 
@@ -19,7 +19,8 @@ transactions.forEach(transaction => {
 const data = {
     datasets: [{
         data: pieData,
-        // responsive: true,
+        responsive: true,
+        maintainAspectRatio : false,
         backgroundColor: [
             '#FF6384',
             '#4BC0C0',
@@ -31,7 +32,7 @@ const data = {
         ],
         label: 'Monthly Spending Summary',
         maintainAspectRatio: false
-         
+
         // for legend
     }],
 
@@ -49,7 +50,13 @@ export default class PolarDemo extends Component {
         return (
             <div>
                 <h2>Monthly Spending Summary</h2>
-                <Polar data={data} />
+                <Row>
+                    <Col xs={12}>
+                        <Polar data={data} />
+                    </Col>
+                </Row>
+
+
             </div>
         );
 

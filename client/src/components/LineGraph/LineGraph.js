@@ -56,4 +56,6 @@ export default class LineDemo extends Component {
     const { datasets } = this.refs.chart.chartInstance.data
     console.log(datasets[0].data);
   }
+
+
 }

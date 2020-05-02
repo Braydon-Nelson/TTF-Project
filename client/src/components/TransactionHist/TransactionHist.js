@@ -21,36 +21,38 @@ export default function TransactionHist(props) {
 
     return (
         <div id="transid">
-            <div>
-                <h2>Activity Details</h2>
+            <Container>
+                <div>
+                    <h2>Activity Details</h2>
 
-            </div>
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Date</th>
-                        <th>Amount</th>
-                        <th>Type</th>
-                        <th>Category</th>
-                        <th>Comments</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {transactions.map(Row => (
-                        <tr key={Row.name}>
-                            <td>{Row.name}</td>
-                            <td>{Row.date}</td>
-                            <td>{Row.amount}</td>
-                            <td>{Row.type}</td>
-                            <td>{Row.category}</td>
-                            <td>{Row.comments}</td>
+                </div>
+                <Table responsive striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Type</th>
+                            <th>Category</th>
+                            <th>Comments</th>
                         </tr>
-                    ))}
-                </tbody>
-            </Table>
+                    </thead>
+                    <tbody>
+                        {transactions.map(Row => (
+                            <tr key={Row.name}>
+                                <td>{Row.name}</td>
+                                <td>{Row.date}</td>
+                                <td>{Row.amount}</td>
+                                <td>{Row.type}</td>
+                                <td>{Row.category}</td>
+                                <td>{Row.comments}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </Table>
 
-        </Container>
+            </Container>
+        </div>
     );
 
 };
