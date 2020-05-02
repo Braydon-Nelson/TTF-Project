@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import moment from 'moment'
 import axios from 'axios'
-import { Form, Button, InputGroup, Container, FormControl } from 'react-bootstrap/'
+import { Form, Button, InputGroup, Row, FormControl } from 'react-bootstrap/'
 import "react-datepicker/dist/react-datepicker.css";
 import "./Form.css"
 import { AuthUserContext, withAuthorization } from '../Session';
+import Container from "../../components/Container"
+import Col from "../../components/Col"
 
 
 // CSS Modules, react-datepicker-cssmodules.css
@@ -55,97 +57,109 @@ const NewForm = () => {
 
     return <AuthUserContext.Consumer>
         {authUser => (
+            <Row>
 
-            <Container className="formContainer">
-                <h2>Add a Transaction</h2>
-                <Form>
-                    <InputGroup className="mb-3">
-                        <InputGroup.Prepend>
-                            <InputGroup.Text id="inputGroup-sizing-default">Transaction Name</InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <FormControl id="TransactionName" name="name" onChange={handleFormChange} aria-describedby="inputGroup-sizing-default" />
-                    </InputGroup>
 
-                    <DatePicker className="mb-3"
-                        selected={startDate}
+                <Col size="md-12">
+                    <Container className="formContainer">
 
-                        id="TransactionDate" onChange={handleDateChange}
-                    />
+                        <Col size="md-7" style={{ margin: "auto" }}  >
+                            <h2 style={{ margin: "auto" }} className="text-center" >Add a Transaction</h2>
+                        </Col>
+                        <Form>
 
-                    <InputGroup className="mb-3">
-                        <InputGroup.Prepend>
-                            <InputGroup.Text>$</InputGroup.Text>
-                            <InputGroup.Text>0.00</InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <FormControl id="TransactionAmount" name="amount" onChange={handleFormChange}
-                            placeholder="Transaction Amount" aria-label="Amount (to the nearest dollar)"
-                            type="number" min="0" />
-                    </InputGroup>
+                            <Col size="md-7" style={{ margin: "auto" }} >
+                                <InputGroup className="mb-3 mt-4">
+                                    <InputGroup.Prepend>
+                                        <InputGroup.Text id="inputGroup-sizing-default">Transaction Name</InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl id="TransactionName" name="name" onChange={handleFormChange} aria-describedby="inputGroup-sizing-default" />
+                                </InputGroup>
 
-                    <Form.Group>
-                        <Form.Label>
-                            Transaction Type
+                                <DatePicker className="mb-3 mt-1"
+                                    selected={startDate}
+
+                                    id="TransactionDate" onChange={handleDateChange}
+                                />
+
+                                <InputGroup className="mb-3 mt-1">
+                                    <InputGroup.Prepend>
+                                        <InputGroup.Text>$</InputGroup.Text>
+                                        <InputGroup.Text>0.00</InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl id="TransactionAmount" name="amount" onChange={handleFormChange}
+                                        placeholder="Transaction Amount" aria-label="Amount (to the nearest dollar)"
+                                        type="number" min="0" />
+                                </InputGroup>
+
+                                <Form.Group>
+                                    <Form.Label className=" mt-1">
+                                        Transaction Type
                         </Form.Label>
-                        <Form.Control as="select" size="sm" id="TransactionType" name="type" onChange={handleFormChange}>
-                            <option>
+                                    <Form.Control as="select" size="sm" id="TransactionType" name="type" onChange={handleFormChange}>
+                                        <option>
 
+                                        </option>
+                                        <option>
+                                            Income
                             </option>
-                            <option>
-                                Income
+                                        <option>
+                                            Expense
                             </option>
-                            <option>
-                                Expense
-                            </option>
-                        </Form.Control>
-                    </Form.Group>
+                                    </Form.Control>
+                                </Form.Group>
 
-                    <Form.Group>
-                        <Form.Label>
-                            Transaction Category
-                        </Form.Label>
-                        <Form.Control as="select" size="sm" id="TransactionCategory" name="category" onChange={handleFormChange}>
-                            <option>
+                                <Form.Group>
+                                    <Form.Label className=" mt-1">
+                                        Transaction Category
+                        </Form.Label >
+                                    <Form.Control as="select" size="sm" id="TransactionCategory" name="category" onChange={handleFormChange} >
+                                        <option>
 
+                                        </option>
+                                        <option>
+                                            Rent/Mortgage
                             </option>
-                            <option>
-                                Rent/Mortgage
+                                        <option>
+                                            Utilities
                             </option>
-                            <option>
-                                Utilities
+                                        <option>
+                                            Groceries or Dining
                             </option>
-                            <option>
-                                Groceries or Dining
+                                        <option>
+                                            Education
                             </option>
-                            <option>
-                                Education
+                                        <option>
+                                            Retail/Shopping
                             </option>
-                            <option>
-                                Retail/Shopping
+                                        <option>
+                                            Other
                             </option>
-                            <option>
-                                Other
-                            </option>
-                        </Form.Control>
-                    </Form.Group>
+                                    </Form.Control>
+                                </Form.Group>
 
 
-                    <InputGroup>
-                        <InputGroup.Prepend>
-                            <InputGroup.Text>Comments</InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <FormControl name="comments" onChange={handleFormChange} as="textarea" aria-label="With textarea" id="TransactionComments" />
-                    </InputGroup>
+                                <InputGroup className="mb-2 mt-4">
+                                    <InputGroup.Prepend>
+                                        <InputGroup.Text>Comments</InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl name="comments" onChange={handleFormChange} as="textarea" aria-label="With textarea" id="TransactionComments" />
+                                </InputGroup>
 
-                    <br></br>
+                                <br></br>
+                            </Col>
 
-                    <Button variant="warning" size="lg" block onClick={() => submitForm(authUser)} className="SubmitTransactionButton"
-                        style={{ width: "104.2%", marginLeft: "-23px" }}>
-                        Submit Transaction
+                            <Button variant="warning" size="lg" block onClick={() => submitForm(authUser)} className="SubmitTransactionButton mt-4"
+                                style={{ width: "100%" }}>
+                                Submit Transaction
                      </Button>
-                </Form>
+                        </Form>
 
 
-            </Container >
+                    </Container >
+                </Col>
+
+            </Row>
         )}
 
     </AuthUserContext.Consumer>
