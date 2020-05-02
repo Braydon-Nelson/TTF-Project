@@ -37,6 +37,7 @@ const data = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
+      maintainAspectRatio: false,
       data: chartData
     }
   ]
