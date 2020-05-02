@@ -25,15 +25,22 @@ const data = {
             '#4BC0C0',
             '#FFCE56',
             '#E7E9ED',
-            '#36A2EB'
+            '#36A2EB',
+            '#c8a2c8',
+            '#e56e27'
         ],
-        label: 'Monthly Spending Summary' // for legend
+        label: 'Monthly Spending Summary',
+        maintainAspectRatio: false
+         
+        // for legend
     }],
 
-    labels: labelData
+    labels: labelData,
 };
 
-
+// const options = {
+//     maintainAspectRatio : false
+//   }
 
 
 
@@ -45,6 +52,7 @@ export default class PolarDemo extends Component {
                 <Polar data={data} />
             </div>
         );
+
     }
 
 }

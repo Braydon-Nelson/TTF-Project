@@ -16,7 +16,7 @@ const SignInPage = () => (
     <div className="background">
         <Container style={{ paddingBottom: "40px" }}>
             <Row >
-                <Col size="md-4" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "56px", height: "430px" }} >
+                <Col size="md-6" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "56px", height: "430px" }} >
                     <h1 className="text-center" style={{ marginTop: "10px" }}>Sign In</h1>
                     <SignInForm />
                     <Row>
