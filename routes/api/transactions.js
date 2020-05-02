@@ -4,12 +4,12 @@ const transactionsController = require("../../controllers/transactionsController
 // Matches with "/api/transactions"
 router
     .route("/")
-    .get(transactionsController.findAll)
+    // .get(transactionsController.findAll)
     .post(transactionsController.create);
 
 // Matches with "/api/transactions/:id"
 router
-    .route("/:id")
+    .route("/:uid")
     .get(transactionsController.findAll);
 
 module.exports = router;

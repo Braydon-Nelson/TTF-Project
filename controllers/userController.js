@@ -12,8 +12,8 @@ module.exports = {
             .then(dbUser => res.json(dbUser))
             .catch(err => res.status(400).json(err));
     },
-    update: function (req, res) {
-        db.User.findOneAndUpdate({ id: req.params.id }, req.body)
+    findOne: function (req, res) {
+        db.User.findOne({ email: req.body.email })
             .then(dbUser => res.json(dbUser))
             .catch(err => res.status(400).json(err));
     },
