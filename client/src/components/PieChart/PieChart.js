@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { transactions } from "../../util/API";
-import { Row, Col } from 'react-bootstrap/'
 import { Polar } from 'react-chartjs-2';
 
 
@@ -12,15 +11,15 @@ transactions.forEach(transaction => {
         pieData.push(parseFloat(transaction.amount));
         labelData.push(transaction.category)
     }
-
-
 });
+
+
 
 const data = {
     datasets: [{
         data: pieData,
         responsive: true,
-        maintainAspectRatio : false,
+        maintainAspectRatio: false,
         backgroundColor: [
             '#FF6384',
             '#4BC0C0',
@@ -31,18 +30,11 @@ const data = {
             '#e56e27'
         ],
         label: 'Monthly Spending Summary',
-        maintainAspectRatio: false
-
         // for legend
     }],
 
     labels: labelData,
 };
-
-// const options = {
-//     maintainAspectRatio : false
-//   }
-
 
 
 export default class PolarDemo extends Component {
@@ -50,13 +42,13 @@ export default class PolarDemo extends Component {
         return (
             <div>
                 <h2>Monthly Spending Summary</h2>
-                <Row>
-                    <Col xs={12}>
-                        <Polar data={data} />
-                    </Col>
-                </Row>
-
-
+                <div className="chart-container" style={{ position: "relative", height: "40vh", width: "80vw" }}>
+                    <Polar
+                        data={data}
+                        width={100}
+                        height={50}
+                        options={{ maintainAspectRatio: false }} />
+                </div>
             </div>
         );
 
