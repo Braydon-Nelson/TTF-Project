@@ -6,7 +6,7 @@ import TransactionHist from "../../components/TransactionHist";
 import LineGraph from "../../components/LineGraph";
 import PieChart from "../../components/PieChart";
 import AddTransactionButton from "../../components/AddTransactionButton";
-import { Tabs, Tab } from 'react-bootstrap/'
+import { Tabs, Tab, Row } from 'react-bootstrap/'
 import "./Home.css"
 
 
