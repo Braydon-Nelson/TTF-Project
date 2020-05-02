@@ -3,7 +3,6 @@ import { transactions } from "../../util/API";
 import { Polar } from 'react-chartjs-2';
 
 
-
 let pieData = [];
 let labelData = [];
 transactions.forEach(transaction => {
@@ -12,7 +11,6 @@ transactions.forEach(transaction => {
         labelData.push(transaction.category)
     }
 });
-
 
 
 const data = {
@@ -30,7 +28,6 @@ const data = {
             '#e56e27'
         ],
         label: 'Monthly Spending Summary',
-        // for legend
     }],
 
     labels: labelData,
