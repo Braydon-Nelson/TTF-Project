@@ -35,7 +35,6 @@ function HomePage() {
 
     return (
 
-
         <Row>
             {/* <Col size="md-1"></Col> */}
             <Col size="md-12">
