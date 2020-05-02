@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withFirebase } from '../Firebase';
-import Row from '../Row';
+
 const INITIAL_STATE = {
     passwordOne: '',
     passwordTwo: '',
