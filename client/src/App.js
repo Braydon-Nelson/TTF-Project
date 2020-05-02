@@ -26,7 +26,7 @@ const App = () => (
 
 
 
-        <div>
+        <div className="overlay">
             <Navigation />
 
             <Route exact path={ROUTES.LANDING} component={LandingPage} />
@@ -42,9 +42,9 @@ const App = () => (
 
 
 
-            
 
-            <Route path="/addTransaction" component={AddTransaction} />
+
+            <Route path={ROUTES.ADD_TRANSACTION} component={AddTransaction} />
 
             <Footer />
 

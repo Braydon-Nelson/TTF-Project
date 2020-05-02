@@ -3,6 +3,9 @@
     width: 75vw;
     align-content: center; */
     margin: 20px;
-    background-color: white;
-    opacity: 89%;
+    background-color: rgba(255, 255, 255, 0.0); /* Black background with opacity */
+    padding-bottom: 115px;
+    padding-top: 45px;
+   
+    
 }

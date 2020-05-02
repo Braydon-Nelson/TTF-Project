@@ -14,7 +14,7 @@ function usernamefun(authUser) {
 
     for (let i = 0; i < arr.length; i++) {
         const element = arr[i];
-        if (element == "@") { var limit = i }
+        if (element === "@") { var limit = i }
 
     }
 
@@ -30,10 +30,10 @@ const AccountPage = () => (
 
 
 
-            < Container style={{ paddingBottom: "40px" }}>
+            < Container style={{ paddingBottom: "60px" }}>
 
                 <Row >
-                    <Col size="md-4" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "56px", height: "430px" }} >
+                    <Col size="md-5" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "70px", height: "585px" }}  >
                         <h1 className="text-center" style={{ marginTop: "13px", fontSize: "50px" }}>Account: {usernamefun(authUser)}</h1>
 
                         <Row>

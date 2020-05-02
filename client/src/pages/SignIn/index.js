@@ -14,9 +14,9 @@ import Row from '../../components/Row'
 const SignInPage = () => (
 
     <div className="background">
-        <Container style={{ paddingBottom: "40px" }}>
+        <Container style={{ paddingBottom: "60px" }}>
             <Row >
-                <Col size="md-4" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "56px", height: "430px" }} >
+                <Col size="md-5" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "70px", height: "585px" }} >
                     <h1 className="text-center" style={{ marginTop: "10px" }}>Sign In</h1>
                     <SignInForm />
                     <Row>
