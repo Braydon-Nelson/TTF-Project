@@ -79,8 +79,7 @@ const NewForm = () => {
                         </InputGroup.Prepend>
                         <FormControl id="TransactionAmount" name="amount" onChange={handleFormChange}
                             placeholder="Transaction Amount" aria-label="Amount (to the nearest dollar)"
-                            type="number"
-                            min="0" />
+                            type="number" min="0" />
                     </InputGroup>
 
                     <Form.Group>

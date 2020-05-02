@@ -33,33 +33,29 @@ function HomePage() {
 
 
     return (
-        <div className="dashboardBackground">
 
-          
-                <Container fluid className = "dashboardBackground">
 
-                    <Tabs defaultActiveKey="table" id="uncontrolled-tab-example">
-                        <Tab eventKey="table" title="Transaction Details">
-                            <TransactionHist transactions={transactions} />
-                        </Tab>
-                        <Tab eventKey="piechart" title="Spending Categories">
-                            <PieChart />
-                        </Tab>
-                        <Tab eventKey="barchart" title="Balance History">
-                            <LineGraph />
-                        </Tab>
-                    </Tabs>
 
-                </Container >
+        <Container className="dashboardBackground">
 
-    
+            <Tabs defaultActiveKey="table" id="uncontrolled-tab-example">
+                <Tab eventKey="table" title="Transaction Details">
+                    <TransactionHist transactions={transactions} />
+                </Tab>
+                <Tab eventKey="piechart" title="Spending Categories">
+                    <PieChart />
+                </Tab>
+                <Tab eventKey="barchart" title="Balance History">
+                    <LineGraph />
+                </Tab>
+            </Tabs>
 
             <AddTransactionButton onClick={addTransactionHandler}>
             </AddTransactionButton>
 
+        </Container >
 
 
-        </div >
     );
 }
 
