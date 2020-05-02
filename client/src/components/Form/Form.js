@@ -57,6 +57,7 @@ const NewForm = () => {
         {authUser => (
 
             <Container className="formContainer">
+                <h2>Add a Transaction</h2>
                 <Form>
                     <InputGroup className="mb-3">
                         <InputGroup.Prepend>
@@ -138,7 +139,8 @@ const NewForm = () => {
 
                     <br></br>
 
-                    <Button variant="warning" size="lg" block onClick={() => submitForm(authUser)} className="SubmitTransactionButton">
+                    <Button variant="warning" size="lg" block onClick={() => submitForm(authUser)} className="SubmitTransactionButton"
+                        style={{ width: "104.2%", marginLeft: "-23px" }}>
                         Submit Transaction
                      </Button>
                 </Form>
