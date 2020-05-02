@@ -22,8 +22,8 @@ export default function TransactionHist(props) {
     return (
         <div id="transid">
             <Container>
-                <div>
-                    <h2>Activity Details</h2>
+                <div >
+                    <h2 className="text-center mb-4  ">Activity Details</h2>
 
                 </div>
                 <Table responsive striped bordered hover>
