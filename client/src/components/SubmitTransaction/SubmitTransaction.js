@@ -7,7 +7,7 @@ import { AuthUserContext, withAuthorization } from '../Session';
 const SubmitTransaction = () => (
 
     <AuthUserContext.Consumer>
-        {authUser => (
+        {submitForm => (
 
             <Button variant="warning" size="lg" block onClick={submitForm} className="SubmitTransactionButton">
                 Submit Transaction
@@ -23,18 +23,18 @@ const condition = authUser => !!authUser;
 
 export default withAuthorization(condition)(SubmitTransaction);
 
-function submitForm(authUser) {
-    console.log("Form not sent yet");
-    axios.post("/api/transactions", {
-        name: name,
-        date: date,
-        amount: amount,
-        type: type,
-        category: category,
-        comment: comment,
-        uid: authUser.user.uid
-    })
-}
+// function submitForm(authUser) {
+//     console.log("Form not sent yet");
+//     axios.post("/api/transactions", {
+//         name: name,
+//         date: date,
+//         amount: amount,
+//         type: type,
+//         category: category,
+//         comment: comment,
+//         uid: authUser.user.uid
+//     })
+// }
 
 
 
