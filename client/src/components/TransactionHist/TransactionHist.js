@@ -20,10 +20,10 @@ export default function TransactionHist(props) {
     //figure out how to add a date sort function!
 
     return (
-        <div>
-             <div>
+        <div id="transid">
+            <div>
                 <h2>Individual Transactions</h2>
-                
+
             </div>
             <Table striped bordered hover>
                 <thead>
