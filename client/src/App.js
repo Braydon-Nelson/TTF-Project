@@ -26,7 +26,7 @@ const App = () => (
 
 
 
-        <div>
+        <div className="overlay">
             <Navigation />
 
             <Route exact path={ROUTES.LANDING} component={LandingPage} />

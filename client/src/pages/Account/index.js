@@ -14,7 +14,7 @@ function usernamefun(authUser) {
 
     for (let i = 0; i < arr.length; i++) {
         const element = arr[i];
-        if (element == "@") { var limit = i }
+        if (element === "@") { var limit = i }
 
     }
 
