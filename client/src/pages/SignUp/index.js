@@ -19,14 +19,14 @@ const SignUpPage = () => (
         <h1 className="text-center" style={{ marginTop: "10px"}}>Sign Up!</h1>
 
         <Row>
-            <Col size="md-2"></Col>
-            <Col size="md-8" >
-                <div >
+            <Col size="md-3"></Col>
+            <Col size="md-8">
+                <div>
                 <SignUpForm />
                 </div>
 
             </Col>
-            <Col size="md-2"></Col>
+            <Col size="md-1"></Col>
 
         </Row>
        
@@ -127,7 +127,7 @@ const INITIAL_STATE = {
     return (
       <form onSubmit={this.onSubmit}>
         <input
-        className="mt-4 ml-4"
+        className="mt-4 ml-3"
           name="username"
           value={username}
           onChange={this.onChange}
@@ -135,7 +135,7 @@ const INITIAL_STATE = {
           placeholder="Full Name"
         />
         <input
-        className="mt-4 ml-4"
+        className="mt-4 ml-3"
           name="email"
           value={email}
           onChange={this.onChange}
@@ -143,7 +143,7 @@ const INITIAL_STATE = {
           placeholder="Email Address"
         />
         <input
-        className="mt-4 ml-4"
+        className="mt-4 ml-3"
           name="passwordOne"
           value={passwordOne}
           onChange={this.onChange}
@@ -151,14 +151,14 @@ const INITIAL_STATE = {
           placeholder="Password"
         />
         <input
-        className="mt-4 ml-4"
+        className="mt-4 ml-3"
           name="passwordTwo"
           value={passwordTwo}
           onChange={this.onChange}
           type="password"
           placeholder="Confirm Password"
         />
-        <button disabled={isInvalid} type="submit" className="mt-4  mr-4" style={{  marginLeft: "66px"}} >
+        <button disabled={isInvalid} type="submit" className="mt-4  mr-4" style={{  marginLeft: "62px"}} >
             Sign Up
             </button>
         {error && <p>{error.message}</p>}
@@ -169,7 +169,7 @@ const INITIAL_STATE = {
 
 
 const SignUpLink = () => (
-  <p  style={{ color: "black", fontSize: "18px" }} className="text-center mr-2">
+  <p  style={{ color: "black", fontSize: "18px" }} className="text-center mr-3">
     Don't have an account? <Link style={{ color: "black", fontSize: "21px" }} to={ROUTES.SIGN_UP}>Sign Up</Link>
   </p>
 );
