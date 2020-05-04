@@ -19,6 +19,13 @@ function Landing() {
                         <h2 className="text-center">Keep track of your spending with</h2>
                         <h1 className="text-center" style={{ fontSize: "80px" }}>TTF</h1>
                     </Col>
+                    <Col size="md-1"></Col>
+                    <Row>
+                        {/* <Col size="md-12" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "115px", height: "200px" }}>
+                            <h2>fsafsjlkl</h2>
+                        </Col> */}
+
+                    </Row>
                 </Row>
             </Container>
         </div>

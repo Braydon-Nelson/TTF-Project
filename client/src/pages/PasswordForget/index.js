@@ -15,15 +15,15 @@ const PasswordForgetPage = () => (
                 <h1 className="text-center" style={{ marginTop: "18px", fontSize: "60px" }}>Forgot Password</h1>
 
                 <Row>
-                    <Col size="md-2"></Col>
+                    <Col size="md-3"></Col>
                     <Col size="md-8" >
-                        <div className="ml-2">
+                        <div>
                             <PasswordForgetForm />
 
                         </div>
 
                     </Col>
-                    <Col size="md-2"></Col>
+                    <Col size="md-1"></Col>
 
                 </Row>
                 <h2 style={{ marginTop: "20px", fontSize: "30px", paddingLeft: "30px", paddingRight: "30px" }} className="text-center ">Check your inbox for an email to reset your password</h2>
@@ -86,7 +86,7 @@ class PasswordForgetFormBase extends Component {
     }
 }
 const PasswordForgetLink = () => (
-    <p className="text-center mr-2 mt-4">
+    <p className="text-center mr-4 mt-4">
         <Link style={{ color: "black", fontSize: "21px" }} to={ROUTES.PASSWORD_FORGET}>Forgot Password?</Link>
     </p>
 );

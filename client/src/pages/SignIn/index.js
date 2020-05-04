@@ -17,21 +17,25 @@ const SignInPage = () => (
         <Container style={{ paddingBottom: "60px" }}>
             <Row >
                 <Col size="md-5" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "70px", height: "585px" }} >
-                    <h1 className="text-center" style={{ marginTop: "10px" }}>Sign In</h1>
-                    <SignInForm />
                     <Row>
-                        <Col size="md-2"></Col>
-                        <Col size="md-8">
-                            <PasswordForgetLink />
+                        <Col size="md-12">
+                            <h1 className="text-center" style={{ marginTop: "10px" }}>Sign In</h1>
+                            <SignInForm />
                         </Col>
-                        <Col size="md-2"></Col>
                     </Row>
                     <Row>
-                        <Col size="md-3"></Col>
-                        <Col size="md-6">
+
+                        <Col size="md-12" >
+                            <PasswordForgetLink />
+                        </Col>
+
+                    </Row>
+                    <Row>
+
+                        <Col size="md-12">
                             <SignUpLink />
                         </Col>
-                        <Col size="md-3"></Col>
+
                     </Row>
                 </Col>
             </Row>
@@ -79,7 +83,7 @@ class SignInFormBase extends Component {
             <form onSubmit={this.onSubmit} className="justify-content-center" >
                 <Row>
                     <Col size="xl-3"></Col>
-                    <Col size="xl-6" className="ml-2 mt-4" >
+                    <Col size="xl-6" className="ml-4 mt-4" >
                         <input
                             name="email"
                             value={email}
@@ -94,7 +98,7 @@ class SignInFormBase extends Component {
                 </Row>
                 <Row>
                     <Col size="md-3"></Col>
-                    <Col size="md-6" className=" ml-2 mt-4">
+                    <Col size="md-6" className=" ml-4 mt-4">
                         <input
                             name="password"
                             value={password}
@@ -107,8 +111,8 @@ class SignInFormBase extends Component {
                 </Row>
                 <Row>
                     <Col size="md-4"></Col>
-                    <Col size="md-6" className="ml-4  mt-4">
-                        <button disabled={isInvalid} type="submit">
+                    <Col size="md-6" className="ml-4  mt-4 justify-content-center">
+                        <button disabled={isInvalid} type="submit" className="ml-2">
                             Sign In
         </button>
                     </Col>
