@@ -34,25 +34,25 @@ const AccountPage = () => (
 
                 <Row >
                     <Col size="md-5" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "70px", height: "585px" }}  >
-                        <h1 className="text-center" style={{ marginTop: "13px", fontSize: "50px" }}>Account: {usernamefun(authUser)}</h1>
+                        <h1 className="text-center" style={{ marginTop: "13px", fontSize: "55px" }}>Account: {usernamefun(authUser)}</h1>
 
                         <Row>
-                            <Col size="md-2"></Col>
+                            <Col size="md-3"></Col>
                             <Col size="md-8" >
-                                <div >
+                                <div className="mr-4">
                                     <PasswordForgetForm />
                                 </div>
 
                             </Col>
-                            <Col size="md-2"></Col>
+                            <Col size="md-1"></Col>
 
                         </Row>
                         <Row>
-                            <Col size="md-2"></Col>
+                            <Col size="md-3"></Col>
                             <Col size="md-8">
                                 <PasswordChangeForm />
                             </Col>
-                            <Col size="md-2"></Col>
+                            <Col size="md-1"></Col>
                         </Row>
                     </Col>
                 </Row>
