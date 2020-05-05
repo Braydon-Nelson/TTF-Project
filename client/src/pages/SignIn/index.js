@@ -17,7 +17,7 @@ const SignInPage = () => (
         <Container style={{ paddingBottom: "60px" }}>
             <Row >
                 <Col size="md-5" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "70px", height: "585px" }} >
-                    <Row>
+                    <Row >
                         <Col size="md-12">
                             <h1 className="text-center" style={{ marginTop: "10px" }}>Sign In</h1>
                             <SignInForm />
@@ -81,10 +81,11 @@ class SignInFormBase extends Component {
 
 
             <form onSubmit={this.onSubmit} className="justify-content-center" >
-                <Row>
-                    <Col size="xl-3"></Col>
-                    <Col size="xl-6" className="ml-4 mt-4" >
+                <Row >
+                    <Col size="md-3"></Col>
+                    <Col size="md-6" className="ml-4  mt-4" >
                         <input
+
                             name="email"
                             value={email}
                             onChange={this.onChange}
@@ -94,7 +95,7 @@ class SignInFormBase extends Component {
                         />
 
                     </Col>
-                    <Col size="xl-3"></Col>
+                    <Col size="md-3"></Col>
                 </Row>
                 <Row>
                     <Col size="md-3"></Col>
