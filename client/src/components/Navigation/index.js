@@ -32,23 +32,27 @@ const Navigation = () => (
 
 const NavigationAuth = () => (
     <div >
-        <Row>
-            <Col size="md-4">
+
+        <Row >
+            <Col size="xs"></Col>
+            <Col size="xs">
 
 
 
-                <Link className="navbar-brand link text-center" to={ROUTES.HOME}>Home</Link>
+                <Link className="navbar-brand  inline-block link text-center ml-4" to={ROUTES.HOME}>Home</Link>
             </Col>
-            <Col size="md-4">
-                <Link className="navbar-brand link text-center" to={ROUTES.ACCOUNT}>Account</Link>
+            <Col size="xs">
+                <Link className="navbar-brand inline-block link text-center ml-4" to={ROUTES.ACCOUNT}>Account</Link>
             </Col>
 
 
 
-            <Col size="md-4" className="ml-4 mt-4">
+            <Col size="xs" className="ml-4 inline-block mt-4">
                 <SignOutButton />
+
             </Col>
         </Row >
+
 
     </div >
 
@@ -58,13 +62,13 @@ const NavigationNonAuth = () => (
     <div>
         <Row>
 
-            <Col size="md-6" >
-                <Link className="navbar-brand link text-center " to={ROUTES.LANDING}>Home</Link>
+            <Col size="xs" >
+                <Link className="navbar-brand link text-center mr-4" to={ROUTES.LANDING}>Home</Link>
 
             </Col>
-            <Col size="md-6" >
+            <Col size="xs" >
 
-                <Link className="navbar-brand link text-center" to={ROUTES.SIGN_IN}>Sign In</Link>
+                <Link className="navbar-brand link text-center ml-4" to={ROUTES.SIGN_IN}>Sign In</Link>
             </Col>
 
         </Row>
