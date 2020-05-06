@@ -11,6 +11,7 @@ const PasswordForgetPage = () => (
     < Container style={{ paddingBottom: "60px" }}>
 
         <Row >
+            <Col size="md"></Col>
             <Col size="md-5" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "70px", height: "585px" }} >
                 <h1 className="text-center" style={{ marginTop: "18px", fontSize: "60px" }}>Forgot Password</h1>
 
@@ -28,6 +29,7 @@ const PasswordForgetPage = () => (
                 </Row>
                 <h2 style={{ marginTop: "20px", fontSize: "30px", paddingLeft: "30px", paddingRight: "30px" }} className="text-center ">Check your inbox for an email to reset your password</h2>
             </Col>
+            <Col size="md"></Col>
         </Row>
     </Container >
 );

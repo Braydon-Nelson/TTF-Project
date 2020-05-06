@@ -15,6 +15,7 @@ const SignUpPage = () => (
 < Container style={{ paddingBottom: "60px" }}>
 
 <Row >
+<Col size="md"></Col>
     <Col size="md-5" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "85px", height: "585px" }}  >
         <h1 className="text-center" style={{ marginTop: "10px"}}>Sign Up!</h1>
 
@@ -31,6 +32,7 @@ const SignUpPage = () => (
         </Row>
        
     </Col>
+    <Col size="md"></Col>
 </Row>
 </Container >
 );

@@ -34,6 +34,7 @@ const AccountPage = () => (
             < Container style={{ paddingBottom: "60px" }}>
 
                 <Row >
+                    <Col size="md"></Col>
                     <Col size="md-5" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "70px", height: "585px" }}  >
                         <h1 className="text-center" style={{ marginTop: "13px", fontSize: "55px" }}>Account: {usernamefun(authUser)}</h1>
 
@@ -56,6 +57,7 @@ const AccountPage = () => (
                             <Col size="md-1"></Col>
                         </Row>
                     </Col>
+                    <Col size="md"></Col>
                 </Row>
             </Container >
 

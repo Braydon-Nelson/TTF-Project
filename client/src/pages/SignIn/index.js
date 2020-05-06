@@ -16,6 +16,7 @@ const SignInPage = () => (
     <div className="background">
         <Container style={{ paddingBottom: "60px" }}>
             <Row >
+                <Col size="md"></Col>
                 <Col size="md-5" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "70px", height: "585px" }} >
                     <Row >
                         <Col size="md-12">
@@ -38,6 +39,7 @@ const SignInPage = () => (
 
                     </Row>
                 </Col>
+                <Col size="md"></Col>
             </Row>
         </Container>
     </div>
