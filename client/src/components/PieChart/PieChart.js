@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { AuthUserContext } from '../../components/Session';
-
 import axios from 'axios'
 import { Polar } from 'react-chartjs-2';
 
