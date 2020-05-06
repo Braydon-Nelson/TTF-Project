@@ -53,6 +53,7 @@ const NewForm = () => {
             comment: formData.comments,
             uid: authUser.uid
         })
+      
     }
 
     return <AuthUserContext.Consumer>
