@@ -69,7 +69,7 @@ function Landing() {
                                 <Col size="xs-12" style={{ marginTop: "40px", paddingTop: "0px", height: "150px" }}>
                                     <Row>
                                         <Col size="md-4">
-                                            <img className="img-thumbnail rounded-circle  profileimage" alt="profilepicture" src={riley} />
+                                            <img className="img-thumbnail rounded-circle mt-1 profileimage" alt="profilepicture" src={riley} />
                                         </Col>
                                         <Col size="md-8"  >
                                             <div className="speech-bubble pt-1 pb-4 pl-3 pr-3 mt-3" >
