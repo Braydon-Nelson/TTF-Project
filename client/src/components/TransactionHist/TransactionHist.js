@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Table } from 'react-bootstrap/'
 import axios from 'axios'
 import { AuthUserContext, withAuthorization } from '../../components/Session';
+
 
 import { transactions } from "../../util/API";
 
@@ -9,17 +10,19 @@ import { transactions } from "../../util/API";
 const TransactionHist = () => {
 
     const [data, setData] = useState({
-        data: []
-    })
+        data: [],
+        run: true
+    });
 
     function getData(authUser) {
         console.log("qwerqwerqwer");
 
         axios.get('/api/transactions/' + authUser.uid)
             .then((response) => {
-                console.log(response.data);
-
-                setData({ data: response.data })
+                setData({
+                    data: response.data,
+                    run: false
+                })
             })
     };
 
@@ -27,12 +30,13 @@ const TransactionHist = () => {
         <AuthUserContext.Consumer>
             {authUser => (
 
-                <div id="transid">
+                < div id="transid">
+
                     <Container>
                         <div >
                             <h2 className="text-center mb-4  ">Activity Details</h2>
-
                         </div>
+                        <div>{(data.run) ? getData(authUser) : console.log("")}</div>
                         <Table responsive striped bordered hover>
                             <thead>
                                 <tr>
@@ -46,7 +50,6 @@ const TransactionHist = () => {
                             </thead>
                             <tbody>
 
-                                {console.log(data.data)}
                                 {
                                     data.data.map(data => (
                                         <tr key={data.name}>
@@ -64,7 +67,9 @@ const TransactionHist = () => {
 
                     </Container>
                 </div>
-            )}
+            )
+            }
+
         </AuthUserContext.Consumer >
     );
 
