@@ -22,3 +22,45 @@ h2 {
     
 }
 
+
+.speech-bubble {
+	position: relative;
+background-color: rgba(127, 223, 255,0.6);
+	border-radius: .4em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 21px solid transparent;
+	border-right-color: rgba(127, 223, 255,0.6);
+	border-left: 0;
+	border-top: 0;
+	margin-top: -10.5px;
+	margin-left: -21px;
+}
+
+.speech-bubble2 {
+	position: relative;
+background-color: rgba(127, 223, 255,0.6);
+	border-radius: .4em;
+}
+
+.speech-bubble2:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 21px solid transparent;
+	border-left-color: rgba(127, 223, 255,0.6);
+	border-right: 0;
+	border-top: 0;
+	margin-top: -10.5px;
+	margin-right: -21px;
+}
