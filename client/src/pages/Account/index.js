@@ -8,6 +8,7 @@ import Row from '../../components/Row'
 import "./style.css"
 
 
+
 function usernamefun(authUser) {
     var str = authUser.email
     var arr = str.split("")
