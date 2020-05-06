@@ -3,18 +3,18 @@ import { render } from 'react-dom';
 import LineGraph from "./LineGraph.js"
 
 
-const styles = {
-    fontFamily: 'sans-serif',
-    textAlign: 'center',
-};
+// const styles = {
+//     fontFamily: 'sans-serif',
+//     textAlign: 'center',
+// };
 
-const App = () => (
-    <div style={styles}>
-        <LineGraph />
-    </div>
-);
+// const App = () => (
+//     <div style={styles}>
+//         <LineGraph />
+//     </div>
+// );
 
-render(<App />, document.getElementById('root'));
+// render(<App />, document.getElementById('root'));
 
 
 
