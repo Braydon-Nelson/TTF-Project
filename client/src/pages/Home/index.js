@@ -35,9 +35,9 @@ const HomePage = () => {
 
     return <AuthUserContext.Consumer>
         {authUser => (
-            <Row>
-                {/* <Col size="md-1"></Col> */}
-                <Col size="md-12">
+            <Row style={{ width: "100vw", margin: "auto" }}>
+
+                <Col size="md-12" >
                     <Container className="dashboardBackground">
 
                         <Tabs defaultActiveKey="table" id="uncontrolled-tab-example">
@@ -57,7 +57,7 @@ const HomePage = () => {
 
                     </Container >
                 </Col>
-                {/* <Col size="md-1"></Col> */}
+
             </Row>
         )}
     </AuthUserContext.Consumer>

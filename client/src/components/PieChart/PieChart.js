@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { AuthUserContext } from '../../components/Session';
 import axios from 'axios'
 import { Polar } from 'react-chartjs-2';
+import { Container } from 'react-bootstrap';
 
 
 function getData(authUser) {
@@ -44,16 +45,18 @@ export default class PolarDemo extends Component {
         return (
             <AuthUserContext.Consumer>
                 {authUser => (
-                    <div>
-                        <h2>Monthly Spending Summary</h2>
-                        <div className="chart-container" style={{ position: "relative", height: "40vh", width: "80vw" }}>
-                            <Polar
-                                data={() => getData(authUser)}
-                                width={100}
-                                height={50}
-                                options={{ maintainAspectRatio: false }} />
+                    <Container>
+                        <div>
+                            <h2 className="text-center mb-4  ">Monthly Spending Summary</h2>
+                            <div className="chart-container col-md-12" style={{ position: "relative", height: "40vh", width: "80vw" }}>
+                                <Polar
+                                    data={() => getData(authUser)}
+                                    width={100}
+                                    height={50}
+                                    options={{ maintainAspectRatio: false }} />
+                            </div>
                         </div>
-                    </div>
+                    </Container>
                 )}
             </AuthUserContext.Consumer >
         );

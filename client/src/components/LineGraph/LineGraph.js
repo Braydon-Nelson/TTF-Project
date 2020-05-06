@@ -4,6 +4,7 @@ import { AuthUserContext } from '../Session';
 import axios from 'axios'
 
 import { transactions } from "../../util/API";
+import { Container } from 'react-bootstrap';
 
 
 function getData(authUser) {
@@ -56,12 +57,13 @@ export default class LineDemo extends Component {
     return (
       <AuthUserContext.Consumer>
         {authUser => (
-          <div>
-            <h2>Your Balance in the Last 30 Days</h2>
-            {console.log("authUser - " + authUser)}
-            <Line data={() => getData(authUser)} />
-          </div>
-
+          <Container>
+            <div>
+              <h2 className="text-center mb-4  ">Your Balance in the Last 30 Days</h2>
+              {console.log("authUser - " + authUser)}
+              <Line data={() => getData(authUser)} />
+            </div>
+          </Container>
         )}
       </AuthUserContext.Consumer >
     );
