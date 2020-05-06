@@ -7,7 +7,7 @@ import FormInput from "../../components/Form";
 export default function AddTransaction() {
 
     return (
-        <div>
+        <div >
             <FormInput>
             </FormInput>
 
