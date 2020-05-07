@@ -20,7 +20,7 @@ const NewForm = () => {
     const [formData, setFormData] = useState({
         name: '',
         date: moment(startDate).format("YYYY/MM/DD"),
-        amount: '',
+        amount: 0,
         type: '',
         category: '',
         comments: ''
@@ -42,17 +42,46 @@ const NewForm = () => {
     }
 
     function submitForm(authUser) {
-        console.log(formData, authUser.uid);
 
+        console.log(formData, authUser.uid);
+        let amountParsed = parseFloat(formData.amount)
+        setFormData({
+            ...formData,
+            amount: amountParsed
+        })
+        console.log(amountParsed);
+
+        switch (formData.type) {
+            case "Income":
+                if (amountParsed < 0) {
+                    amountParsed = amountParsed * -1
+                    setFormData({
+                        ...formData,
+                        amount: amountParsed
+                    })
+                }
+                break;
+            case "Expense":
+                if (amountParsed > 0) {
+                    amountParsed = amountParsed * -1
+                    setFormData({
+                        ...formData,
+                        amount: amountParsed
+                    })
+                }
+                break;
+        }
         axios.post("/api/transactions", {
             name: formData.name,
             date: formData.date,
-            amount: formData.amount,
+            amount: amountParsed,
             type: formData.type,
             category: formData.category,
             comment: formData.comments,
             uid: authUser.uid
         })
+
+
     }
 
     return <AuthUserContext.Consumer>
