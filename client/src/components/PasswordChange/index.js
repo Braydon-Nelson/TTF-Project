@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withFirebase } from '../Firebase';
+import { Col } from 'react-bootstrap'
 
 const INITIAL_STATE = {
     passwordOne: '',
@@ -31,30 +32,41 @@ class PasswordChangeForm extends Component {
         const isInvalid =
             passwordOne !== passwordTwo || passwordOne === '';
         return (
-            <form onSubmit={this.onSubmit}>
+            <Col xs={12}>
+                <form onSubmit={this.onSubmit} style={{
+                    textAlign: "center"
+                }}>
 
+                    <Col xs={12}>
+                        <input className="mt-4 ml-3"
+                            name="passwordOne"
+                            value={passwordOne}
+                            onChange={this.onChange}
+                            type="password"
+                            placeholder="New Password"
+                        />
+                    </Col>
 
-                <input className="mt-4 ml-3"
-                    name="passwordOne"
-                    value={passwordOne}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="New Password"
-                />
-                <input
-                    className="mt-4 ml-3"
-                    name="passwordTwo"
-                    value={passwordTwo}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Confirm New Password"
-                />
+                    <Col xs={12}>
+                        <input
+                            className="mt-4 ml-3"
+                            name="passwordTwo"
+                            value={passwordTwo}
+                            onChange={this.onChange}
+                            type="password"
+                            placeholder="Confirm New Password"
+                        />
+                    </Col>
 
-                <button disabled={isInvalid} type="submit" className="mt-4 ml-4">
-                    Reset My Password
-        </button>
-                {error && <p>{error.message}</p>}
-            </form>
+                    <Col xs={12}>
+                        <button disabled={isInvalid} type="submit" className="mt-4 ml-4">
+                            Reset My Password
+                        </button>
+                    </Col>
+
+                    {error && <p>{error.message}</p>}
+                </form>
+            </Col>
         );
     }
 }
