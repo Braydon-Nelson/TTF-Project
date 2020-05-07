@@ -3,8 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 import axios from 'axios';
 import Container from "../../components/Container"
-import Col from '../../components/Col'
-import Row from '../../components/Row'
+import { Row, Col } from 'react-bootstrap'
 
 import { withFirebase } from '../../components/Firebase';
 import * as ROUTES from '../../constants/routes';
@@ -15,8 +14,7 @@ const SignUpPage = () => (
 < Container style={{ paddingBottom: "60px" }}>
 
 <Row >
-<Col size="md"></Col>
-    <Col size="md-5" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "85px", height: "585px" }}  >
+    <Col xs={12}  style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "85px", height: "585px" }}  >
         <h1 className="text-center" style={{ marginTop: "10px"}}>Sign Up!</h1>
 
         <Row>
@@ -32,7 +30,6 @@ const SignUpPage = () => (
         </Row>
        
     </Col>
-    <Col size="md"></Col>
 </Row>
 </Container >
 );
@@ -127,7 +124,10 @@ const INITIAL_STATE = {
 
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit} style={{
+        textAlign: "center"
+    }}>
+
         <input
         className="mt-4 ml-3"
           name="username"
