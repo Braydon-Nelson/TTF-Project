@@ -36,8 +36,8 @@ const App = () => (
                 path={ROUTES.PASSWORD_FORGET}
                 component={PasswordForgetPage}
             />
-            <Route path={"/home"} component={HomePage} />
-            <Route path={"/account"} component={AccountPage} />
+            <Route path={ROUTES.HOME} component={HomePage} />
+            <Route path={ROUTES.ACCOUNT} component={AccountPage} />
             <Route path={ROUTES.ADMIN} component={AdminPage} />
             <Route path={ROUTES.ADD_TRANSACTION} component={AddTransaction} />
 

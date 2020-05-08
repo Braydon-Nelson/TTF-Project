@@ -79,7 +79,16 @@ const NewForm = () => {
             category: formData.category,
             comment: formData.comments,
             uid: authUser.uid
-        })
+        }).then(
+            setFormData({
+                name: '',
+                date: moment(startDate).format("YYYY/MM/DD"),
+                amount: 0,
+                type: '',
+                category: '',
+                comments: ''
+            })
+        )
 
     }
 
