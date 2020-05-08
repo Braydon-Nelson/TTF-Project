@@ -3,9 +3,9 @@ import { PasswordForgetForm } from '../PasswordForget';
 import PasswordChangeForm from '../../components/PasswordChange';
 import { AuthUserContext, withAuthorization } from '../../components/Session';
 import Container from "../../components/Container"
-import Col from '../../components/Col'
-import Row from '../../components/Row'
+import { Row, Col } from 'react-bootstrap'
 import "./style.css"
+
 
 
 function usernamefun(authUser) {
@@ -32,37 +32,21 @@ const AccountPage = () => (
 
             < Container style={{ paddingBottom: "60px" }}>
 
-                <Row >
-                    <Col size="md-5" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "70px", height: "585px" }}  >
-                        <h1 className="text-center" style={{ marginTop: "13px", fontSize: "55px" }}>Account: {usernamefun(authUser)}</h1>
+                <Col xs={12} style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "70px", height: "585px" }}  >
+                    <h1 className="text-center" style={{ marginTop: "13px", fontSize: "55px" }}>Account: {usernamefun(authUser)}</h1>
 
-                        <Row>
-                            <Col size="md-3"></Col>
-                            <Col size="md-8" >
-                                <div className="mr-4">
-                                    <PasswordForgetForm />
-                                </div>
+                    <Row>
+                        <PasswordForgetForm />
+                    </Row>
 
-                            </Col>
-                            <Col size="md-1"></Col>
+                    <Row>
+                        <PasswordChangeForm />
+                    </Row>
+                </Col>
 
-                        </Row>
-                        <Row>
-                            <Col size="md-3"></Col>
-                            <Col size="md-8">
-                                <PasswordChangeForm />
-                            </Col>
-                            <Col size="md-1"></Col>
-                        </Row>
-                    </Col>
-                </Row>
+
             </Container >
 
-            // <Container>
-            //     <h1>Account: {authUser.email}</h1>
-            //     <PasswordForgetForm />
-            //     <PasswordChangeForm />
-            // </Container>
 
         )}
     </AuthUserContext.Consumer >

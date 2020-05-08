@@ -2,33 +2,30 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withFirebase } from '../../components/Firebase';
 import * as ROUTES from '../../constants/routes';
-import Col from '../../components/Col'
-import Row from '../../components/Row'
+
+import { Row, Col } from 'react-bootstrap'
 import Container from "../../components/Container"
 
 const PasswordForgetPage = () => (
 
     < Container style={{ paddingBottom: "60px" }}>
 
-        <Row >
-            <Col size="md-5" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "70px", height: "585px" }} >
-                <h1 className="text-center" style={{ marginTop: "18px", fontSize: "60px" }}>Forgot Password</h1>
 
-                <Row>
-                    <Col size="md-3"></Col>
-                    <Col size="md-8" >
-                        <div>
-                            <PasswordForgetForm />
+        
+            <Col xs={12} style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "70px", height: "585px" }}>
 
-                        </div>
+                    <h1 className="text-center" style={{ marginTop: "18px", fontSize: "60px" }}>Forgot Password</h1>
 
-                    </Col>
-                    <Col size="md-1"></Col>
+                    <Row>
+                        <PasswordForgetForm />
+                    </Row>
 
-                </Row>
-                <h2 style={{ marginTop: "20px", fontSize: "30px", paddingLeft: "30px", paddingRight: "30px" }} className="text-center ">Check your inbox for an email to reset your password</h2>
+                    <h2 style={{ marginTop: "20px", fontSize: "30px", paddingLeft: "30px", paddingRight: "30px" }} className="text-center ">Check your inbox for an email to reset your password</h2>
+
             </Col>
-        </Row>
+        
+
+
     </Container >
 );
 
@@ -68,20 +65,38 @@ class PasswordForgetFormBase extends Component {
         const { email, error } = this.state;
         const isInvalid = email === '';
         return (
-            <form onSubmit={this.onSubmit}>
-                <input
-                    className="mt-3 ml-3"
-                    name="email"
-                    value={this.state.email}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Email Address"
-                />
-                <button disabled={isInvalid} type="submit" className="mt-4 ml-4">
-                    Reset My Password
-        </button>
-                {error && <p>{error.message}</p>}
-            </form>
+            <Col lg={12} xs={12}>
+
+                <form onSubmit={this.onSubmit} style={{
+                    textAlign: "center"
+                }}>
+                    <Row >
+
+                        <Col xs={12}>
+                            <input
+                                className="mt-3 ml-3"
+                                name="email"
+                                value={this.state.email}
+                                onChange={this.onChange}
+                                type="text"
+                                placeholder="Email Address"
+                            />
+                        </Col>
+                    </Row>
+
+
+                    <Row>
+                        <Col xs={12}>
+                            <button disabled={isInvalid} type="submit" className="mt-4 ml-4">
+                                Reset My Password</button>
+                        </Col>
+                    </Row>
+
+
+                    {error && <p>{error.message}</p>}
+                </form >
+            </Col>
+
         );
     }
 }

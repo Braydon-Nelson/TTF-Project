@@ -6,8 +6,7 @@ import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../../components/Firebase';
 import * as ROUTES from '../../constants/routes';
 import Container from '../../components/Container'
-import Col from '../../components/Col'
-import Row from '../../components/Row'
+import { Row, Col } from 'react-bootstrap'
 
 
 
@@ -15,30 +14,37 @@ const SignInPage = () => (
 
     <div className="background">
         <Container style={{ paddingBottom: "60px" }}>
-            <Row >
-                <Col size="md-5" style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "70px", height: "585px" }} >
+           
+
+                <Col xs={12} style={{ backgroundColor: "rgba(127, 223, 255,0.6)", marginTop: "60px", paddingTop: "70px", height: "585px" }} >
                     <Row >
-                        <Col size="md-12">
+                        <Col lg={12} xs={12}>
                             <h1 className="text-center" style={{ marginTop: "10px" }}>Sign In</h1>
+                        </Col>
+                    </Row>
+
+                    <Row>
+                        <Col lg={12} xs={12}>
                             <SignInForm />
                         </Col>
                     </Row>
-                    <Row>
 
-                        <Col size="md-12" >
+
+                    <Row>
+                        <Col lg={12} xs={12}>
                             <PasswordForgetLink />
                         </Col>
-
                     </Row>
-                    <Row>
 
-                        <Col size="md-12">
+                    <Row>
+                        <Col lg={12} xs={12}>
                             <SignUpLink />
                         </Col>
-
                     </Row>
+
                 </Col>
-            </Row>
+
+          
         </Container>
     </div>
 
@@ -80,26 +86,27 @@ class SignInFormBase extends Component {
 
 
 
-            <form onSubmit={this.onSubmit} className="justify-content-center" >
+            <form onSubmit={this.onSubmit} className="justify-content-center" style={{
+                textAlign: "center"
+            }}>
                 <Row >
-                    <Col size="md-3"></Col>
-                    <Col size="md-6" className="ml-4  mt-4" >
-                        <input
 
+                    <Col xs={12}
+                        className="ml-4  mt-4" >
+                        <input
                             name="email"
                             value={email}
                             onChange={this.onChange}
                             type="text"
                             placeholder="Email Address"
-
                         />
 
                     </Col>
-                    <Col size="md-3"></Col>
+
                 </Row>
                 <Row>
-                    <Col size="md-3"></Col>
-                    <Col size="md-6" className=" ml-4 mt-4">
+
+                    <Col xs={12} className=" ml-4 mt-4">
                         <input
                             name="password"
                             value={password}
@@ -108,16 +115,16 @@ class SignInFormBase extends Component {
                             placeholder="Password"
                         />
                     </Col>
-                    <Col size="md-3"></Col>
+
                 </Row>
                 <Row>
-                    <Col size="md-4"></Col>
-                    <Col size="md-6" className="ml-4  mt-4 justify-content-center">
+
+                    <Col xs={12} className="ml-4  mt-4 justify-content-center">
                         <button disabled={isInvalid} type="submit" className="ml-2">
                             Sign In
         </button>
                     </Col>
-                    <Col size="md-2"></Col>
+
                 </Row>
                 {error && <p>{error.message}</p>}
 

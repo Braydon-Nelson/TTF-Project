@@ -81,12 +81,11 @@ const NewForm = () => {
             uid: authUser.uid
         })
 
-
     }
 
     return <AuthUserContext.Consumer>
         {authUser => (
-            <Row>
+            <Row style={{ width: "100vw", margin: "auto" }}>
 
 
                 <Col size="md-12">

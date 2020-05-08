@@ -26,7 +26,6 @@ const TransactionHist = () => {
             })
     };
 
-    //figure out how to add a date sort function!
     return (
         <AuthUserContext.Consumer>
             {authUser => (
@@ -79,3 +78,34 @@ const condition = authUser => !!authUser;
 
 
 export default withAuthorization(condition)(TransactionHist);
+
+  //figure out how to add a date sort function!
+//     const [data, setData] = useState({
+//         data: []
+//     })
+
+//     const [order, setOrder] = useState(
+//         "descend"
+//     )
+
+//     function dateSort(heading) {
+//     if (order === "descend") {
+//         setOrder("ascend")
+//     } else {
+//         setOrder("descend")
+//     }
+//     function compare(a, b) {
+//         if (a[heading] === "undefined") {
+//             return 1;
+//         } else if (b[heading] === "undefined") {
+//             return -1;
+//         }
+//         if (order === "ascend") {
+//             return a[heading] - b[heading]
+//         } else {
+//             return b[heading] - a[heading]
+//         }
+//     }
+//     const sortedDates = data.sort(compare)
+//     setData(sortedDates);
+// }
