@@ -72,21 +72,21 @@ const INITIAL_STATE = {
             email,
           });
       })
-      .then(()=> {
-        axios.post('/api/user/adduser', {
-          "username": this.state.username,
-          "email": this.state.email,
-          "uid": this.state.uid
-      })
-        .then(function (response) {
-          // handle success
-          // console.log(response);
-        })
-        .catch(function (error) {
-          // handle error
-          console.log(error);
-        })
-      })
+      // .then(()=> {
+      //   axios.post('/api/user/adduser', {
+      //     "username": this.state.username,
+      //     "email": this.state.email,
+      //     "uid": this.state.uid
+      // })
+      //   .then(function (response) {
+      //     // handle success
+      //     // console.log(response);
+      //   })
+      //   .catch(function (error) {
+      //     // handle error
+      //     console.log(error);
+      //   })
+      // })
       .then(() => {
         this.setState({ ...INITIAL_STATE });
         this.props.history.push(ROUTES.HOME);
