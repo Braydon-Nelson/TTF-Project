@@ -13,7 +13,7 @@ function getData(authUser) {
         .then((response) => {
             response.data.forEach(transaction => {
                 if (transaction.type === "Expense") {
-                    pieData.push(parseFloat(transaction.amount));
+                    pieData.push(transaction.amount * -1);
                     labelData.push(transaction.category)
                 }
             });
