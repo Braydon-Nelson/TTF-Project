@@ -2,13 +2,9 @@ import React from 'react';
 import Container from "../../components/Container"
 import { Row, Col } from 'react-bootstrap'
 import "./style.css"
-// import riley from "./images/riley.png"
-// import isaac from "./images/isaac.jpeg"
-// import q from "./images/q.jpeg"
-
-
-
-
+import riley from "./images/riley.png"
+import isaac from "./images/isaac.jpeg"
+import q from "./images/q.jpeg"
 
 function Landing() {
 
@@ -26,7 +22,7 @@ function Landing() {
                     <Col lg={2} xs={12}></Col>
 
 
-                    {/* <Col lg={6} xs={12}>
+                    <Col lg={6} xs={12}>
 
                         <Row>
 
@@ -77,7 +73,7 @@ function Landing() {
 
                         </Row>
 
-                    </Col> */}
+                    </Col>
 
                 </Row>
             </Container>
