@@ -39,11 +39,6 @@ const App = () => (
             <Route path={ROUTES.HOME} component={HomePage} />
             <Route path={ROUTES.ACCOUNT} component={AccountPage} />
             <Route path={ROUTES.ADMIN} component={AdminPage} />
-
-
-
-
-
             <Route path={ROUTES.ADD_TRANSACTION} component={AddTransaction} />
 
             <Footer />

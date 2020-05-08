@@ -1,9 +1,8 @@
-import React, { Component, useRef } from 'react';
+import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 import { AuthUserContext } from '../Session';
 import axios from 'axios'
 
-import { transactions } from "../../util/API";
 import { Container } from 'react-bootstrap';
 
 
@@ -60,7 +59,6 @@ export default class LineDemo extends Component {
           <Container>
             <div>
               <h2 className="text-center mb-4  ">Your Balance in the Last 30 Days</h2>
-              {console.log("authUser - " + authUser)}
               <Line data={() => getData(authUser)} />
             </div>
           </Container>

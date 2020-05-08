@@ -43,13 +43,11 @@ const NewForm = () => {
 
     function submitForm(authUser) {
 
-        console.log(formData, authUser.uid);
         let amountParsed = parseFloat(formData.amount)
         setFormData({
             ...formData,
             amount: amountParsed
         })
-        console.log(amountParsed);
 
         switch (formData.type) {
             case "Income":
@@ -69,6 +67,8 @@ const NewForm = () => {
                         amount: amountParsed
                     })
                 }
+                break;
+            default:
                 break;
         }
         axios.post("/api/transactions", {

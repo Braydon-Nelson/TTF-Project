@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { AuthUserContext, withAuthorization } from '../../components/Session';
 import Container from "../../components/Container"
-import API from "../../util/API"
 import TransactionHist from "../../components/TransactionHist";
 import LineGraph from "../../components/LineGraph";
 import PieChart from "../../components/PieChart";
@@ -10,26 +9,7 @@ import { Tabs, Tab, Row } from 'react-bootstrap/'
 import Col from "../../components/Col"
 import "./Home.css"
 
-
-
 const HomePage = () => {
-
-    function addTransactionHandler(e) {
-        console.log(e);
-    };
-
-
-    const [transactions, setTransactions] = useState([])
-
-
-    const { userid } = 1;
-
-    useEffect(() => {
-        const transactiondata = API.getTransactions(userid);
-
-        setTransactions(transactiondata);
-    }, [])
-
 
 
 
@@ -52,7 +32,7 @@ const HomePage = () => {
                             </Tab>
                         </Tabs>
 
-                        <AddTransactionButton onClick={addTransactionHandler}>
+                        <AddTransactionButton >
                         </AddTransactionButton>
 
                     </Container >
@@ -61,10 +41,6 @@ const HomePage = () => {
             </Row>
         )}
     </AuthUserContext.Consumer>
-
-
-
-
 
 }
 

@@ -18,7 +18,7 @@ function usernamefun(authUser) {
 
     }
 
-    var authUser = str.slice(0, limit)
+    authUser = str.slice(0, limit)
 
     return authUser;
 }

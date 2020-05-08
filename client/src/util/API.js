@@ -4,8 +4,6 @@ export default {
     // Gets all transactions
     getTransactions: function (userid) {
         return transactions;
-
-        // return axios.get("/api/transactions/" + userid);
     },
     // Gets the Transaction with the given id
     getTransaction: function (id) {
