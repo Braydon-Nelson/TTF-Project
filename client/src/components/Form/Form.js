@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import moment from 'moment'
+import { useHistory } from "react-router-dom";
 import axios from 'axios'
 import { Form, Button, InputGroup, Row, FormControl } from 'react-bootstrap/'
 import "react-datepicker/dist/react-datepicker.css";
@@ -13,8 +14,9 @@ import Col from "../../components/Col"
 // CSS Modules, react-datepicker-cssmodules.css
 // import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
-
 const NewForm = () => {
+    let history = useHistory();
+
     const [startDate, setStartDate] = useState(new Date());
 
     const [formData, setFormData] = useState({
@@ -79,16 +81,18 @@ const NewForm = () => {
             category: formData.category,
             comment: formData.comments,
             uid: authUser.uid
-        }).then(
-            setFormData({
-                name: '',
-                date: moment(startDate).format("YYYY/MM/DD"),
-                amount: 0,
-                type: '',
-                category: '',
-                comments: ''
-            })
-        )
+        })
+        setFormData({
+            name: '',
+            date: moment(startDate).format("YYYY/MM/DD"),
+            amount: 0,
+            type: '',
+            category: '',
+            comments: ''
+        })
+        history.push('/home')
+
+
 
     }
 
