@@ -7,6 +7,7 @@ Our application provides a straightforward, secure way for a user to track their
 
 ### Links
 Github Repository: https://github.com/Braydon-Nelson/TTF-Project
+
 Deployed Heroku Site: https://totally-tubular-finances.herokuapp.com/
 
 ### Problem
